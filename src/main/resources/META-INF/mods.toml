@@ -49,24 +49,23 @@ Create: Blood is Fuel! adds a new fuel type for Create: Diesel Generators that i
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[40,)" #mandatory
+    versionRange="[47,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
-[[dependencies.bloodisfuel]]
-    modId="create"
-    mandatory=true
-    versionRange="[0.5.1.e,0.5.2)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.bloodisfuel]]
-    modId="flywheel"
-    mandatory=true
-    versionRange="[0.6.9.a,0.7)"
-    ordering="AFTER"
-    side="CLIENT"
-# Here's another dependency
+#[[dependencies.bloodisfuel]]
+#    modId="create"
+#    mandatory=true
+#    versionRange="[0.5.1.e,0.5.2)"
+#    ordering="NONE"
+#    side="BOTH"
+#[[dependencies.bloodisfuel]]
+#    modId="flywheel"
+#    mandatory=true
+#    versionRange="[0.6.9.a,0.7)"
+#    ordering="AFTER"
+#    side="CLIENT"
 [[dependencies.bloodisfuel]]
     modId="minecraft"
     mandatory=true
