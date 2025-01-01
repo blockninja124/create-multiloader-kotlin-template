@@ -1,3 +1,7 @@
 {
-  "item.bloodisfuel.blood_bucket": "Bucket of Blood"
+  "fluid.bloodisfuel.blood": "Blood",
+  "item.bloodisfuel.blood_bucket": "Bucket of Blood",
+
+
+  "creativetab.blood_tab": "Blood is Fuel!"
 }
