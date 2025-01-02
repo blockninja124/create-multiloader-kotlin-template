@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "tconstruct:meat_soup"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "bloodisfuel:blood",
+      "amount": 125
+    }
+  ],
+  "heatRequirement": "heated"
+}

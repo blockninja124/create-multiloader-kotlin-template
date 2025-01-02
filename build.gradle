@@ -91,23 +91,18 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven { url = "https://dvs1.progwml6.com/files/maven/" }  // JEI
+    maven { url = "https://modmaven.k-4u.nl" }  // JEI backup
+    maven { url = 'https://maven.blamejared.com' }
     maven {
-        // location of the maven for Registrate and Flywheel
         name = 'tterrag maven'
-        url = 'https://maven.tterrag.com'
+        url = 'https://maven.tterrag.com/'
     }
-    maven {
-        // location of the maven that hosts JEI files since January 2023
-        // location of the maven for Vazkii's mods
-        name = "Jared's maven"
-        url = "https://maven.blamejared.com/"
-    }
-    maven {
-        url "https://cursemaven.com"
-    }
+    maven { url = "https://www.cursemaven.com" }
+    maven { url = "https://api.modrinth.com/maven" }
 }
+
 dependencies {
-    //built in Minecraft
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     //JEI
@@ -120,18 +115,30 @@ dependencies {
     implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${big_mc_version}:${flywheel_version}")
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation fg.deobf("curse.maven:create-diesel-generators-869316:5401010")
+
+    //Biomancy
+    implementation fg.deobf("curse.maven:bio-factory-1136762:5887553")
+    implementation fg.deobf("curse.maven:biomancy-492939:5886758")
+    implementation fg.deobf("curse.maven:geckolib-388172:6027567")
+
+    //TConstruct, Mantle
+    implementation fg.deobf("curse.maven:mantle-74924:6041712")
+    implementation fg.deobf("curse.maven:tinkers-construct-74072:6041763")
 }
 
 def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta']
 def replaceProperties = [
-        minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
-        forge_version: forge_version, forge_version_range: forge_version_range,
-        loader_version_range: loader_version_range,
         mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
         mod_authors: mod_authors, mod_description: mod_description,
-        big_mc_version: big_mc_version, big_forge_version: big_forge_version,
-        create_version: create_version, create_build_number: create_build_number,
-        flywheel_version: flywheel_version, jei_version: jei_version
+
+        minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range, big_mc_version: big_mc_version,
+        forge_version: forge_version, forge_version_range: forge_version_range, big_forge_version: big_forge_version,
+        loader_version_range: loader_version_range,
+        mapping_channel: mapping_channel, mapping_version: mapping_version,
+
+        create_version: create_version, flywheel_version: flywheel_version,
+        registrate_version: registrate_version,
+        jei_version: jei_version, jei_version_range: jei_version_range
 ]
 processResources {
     inputs.properties replaceProperties

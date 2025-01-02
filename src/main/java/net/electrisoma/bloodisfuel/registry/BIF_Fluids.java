@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel.register;
+package net.electrisoma.bloodisfuel.registry;
 
 import com.tterrag.registrate.util.entry.FluidEntry;
 import net.minecraft.resources.ResourceLocation;
@@ -6,7 +6,7 @@ import net.minecraftforge.fluids.ForgeFlowingFluid;
 
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
 
-public class Fluids {
+public class BIF_Fluids {
 
     public static final FluidEntry<ForgeFlowingFluid.Flowing> BLOOD =
             REGISTRATE.fluid("blood",
@@ -21,7 +21,17 @@ public class Fluids {
                             .explosionResistance(100f))
                     .register();
 
+    public static final FluidEntry<ForgeFlowingFluid.Flowing> ENRICHED_BLOOD =
+            REGISTRATE.fluid("enriched_blood",
+                            new ResourceLocation("bloodisfuel:block/blood_still"),
+                            new ResourceLocation("bloodisfuel:block/blood_flow"))
+                    .lang("Enriched Blood")
+                    .properties(b -> b.viscosity(1750)
+                            .density(750))
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(3)
+                            .explosionResistance(100f))
+                    .register();
     public static void register() {}
-
-
 }

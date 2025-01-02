@@ -1,8 +1,5 @@
 {
-  "replace": false,
   "values": [
-    "bloodisfuel:flowing_blood",
-    "bloodisfuel:blood",
     "bloodisfuel:flowing_enriched_blood",
     "bloodisfuel:enriched_blood"
   ]

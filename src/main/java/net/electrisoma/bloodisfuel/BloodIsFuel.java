@@ -1,7 +1,7 @@
 package net.electrisoma.bloodisfuel;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.electrisoma.bloodisfuel.register.*;
+import net.electrisoma.bloodisfuel.registry.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +16,8 @@ public class BloodIsFuel {
     public BloodIsFuel() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Fluids.register();
+        BIF_Fluids.register();
+        BIF_Items.register();
         CreativeTab.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
