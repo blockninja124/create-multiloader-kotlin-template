@@ -112,7 +112,7 @@ dependencies {
 
     //Create, Flywheel, Registrate, Create Diesel Generators
     implementation fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_build_number}:slim") { transitive = false }
-    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${big_mc_version}:${flywheel_version}")
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation fg.deobf("curse.maven:create-diesel-generators-869316:5401010")
 
