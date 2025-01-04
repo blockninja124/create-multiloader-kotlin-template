@@ -1,0 +1,18 @@
+{
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_cod"
+    }
+  ],
+  "results": [
+    {
+      "chance": 0.4,
+      "item": "minecraft:raw_cod"
+    },
+    {
+      "amount": 10,
+      "fluid": "bloodisfuel:viscera"
+    }
+  ]
+}

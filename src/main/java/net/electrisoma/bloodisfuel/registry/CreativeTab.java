@@ -1,5 +1,7 @@
 package net.electrisoma.bloodisfuel.registry;
 
+import net.electrisoma.bloodisfuel.registry.fluids.BIF_Fluids;
+import net.electrisoma.bloodisfuel.registry.items.BIF_Items;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,8 +23,12 @@ public class CreativeTab {
                     .displayItems((pParameters, output) -> {
                         output.accept(BIF_Fluids.BLOOD.getBucket().get());
                         output.accept(BIF_Fluids.ENRICHED_BLOOD.getBucket().get());
-                        output.accept(BIF_Items.GROUND_MEAT.asItem());
+                        output.accept(BIF_Fluids.VISCERA.getBucket().get());
 
+                        output.accept(BIF_Fluids.BLOOD.getBucket().get());
+                        output.accept(BIF_Fluids.ENRICHED_BLOOD.getBucket().get());
+
+                        output.accept(BIF_Items.GROUND_MEAT.asItem());
                     })
                     .icon(() -> BIF_Fluids.BLOOD.getBucket().get().getDefaultInstance())
                     .build());

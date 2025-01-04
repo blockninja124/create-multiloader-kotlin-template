@@ -1,7 +1,10 @@
 package net.electrisoma.bloodisfuel;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.electrisoma.bloodisfuel.registry.*;
+import net.electrisoma.bloodisfuel.registry.CreativeTab;
+import net.electrisoma.bloodisfuel.registry.blocks.BIF_Blocks;
+import net.electrisoma.bloodisfuel.registry.fluids.BIF_Fluids;
+import net.electrisoma.bloodisfuel.registry.items.BIF_Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +21,7 @@ public class BloodIsFuel {
 
         BIF_Fluids.register();
         BIF_Items.register();
+        BIF_Blocks.register();
         CreativeTab.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
