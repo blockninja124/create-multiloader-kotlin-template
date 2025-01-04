@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "bloodisfuel:blood",
+      "amount": 250
+    },
+    {
+      "fluid": "biofactory:nutrients_fluid",
+      "amount": 120
+    }
+  ],
+  "results": [
+    {
+      "fluid": "bloodisfuel:enriched_blood",
+      "amount": 125
+    }
+  ]
+}
