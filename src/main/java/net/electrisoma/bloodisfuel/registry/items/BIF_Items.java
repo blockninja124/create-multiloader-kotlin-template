@@ -13,9 +13,12 @@ public class BIF_Items {
             .properties(p -> p
                     .food(new FoodProperties.Builder()
                     .meat()
-                    .nutrition(4).saturationMod(0.1f)
-                    .effect(new MobEffectInstance(MobEffects.HUNGER, 600, 0),0.8f)
-                    .effect(new MobEffectInstance(MobEffects.POISON, 300, 2),0.8f)
+                    .nutrition(4)
+                            .saturationMod(0.1f)
+                    .effect(new MobEffectInstance(MobEffects.HUNGER,
+                            600, 0),0.8f)
+                    .effect(new MobEffectInstance(MobEffects.POISON,
+                            300, 2),0.8f)
                     .meat()
                     .build()))
             .lang("Ground Meat")

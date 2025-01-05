@@ -1,0 +1,15 @@
+{
+  "type":"createaddition:liquid_burning",
+  "input": {
+    "fluidTag": "bloodisfuel:viscera",
+    "amount": 1000
+  },
+  "burnTime": 8000,
+  "superheated": false,
+  "conditions": [
+    {
+      "fluidTag": "bloodisfuel:viscera",
+      "type": "createaddition:has_fluid_tag"
+    }
+  ]
+}

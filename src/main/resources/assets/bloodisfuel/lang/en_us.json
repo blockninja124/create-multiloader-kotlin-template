@@ -1,13 +1,15 @@
 {
+  "fluid.bloodisfuel.viscera": "Viscera",
   "fluid.bloodisfuel.blood": "Blood",
   "fluid.bloodisfuel.enriched_blood": "Enriched Blood",
-  "fluid.bloodisfuel.viscera": "Viscera",
 
-  "item.bloodisfuel.enriched_blood_bucket": "Bucket of Enriched Blood",
-  "item.bloodisfuel.blood_bucket": "Bucket of Blood",
+  "block.bloodisfuel.viscera": "Viscera",
+  "block.bloodisfuel.blood": "Blood",
+  "block.bloodisfuel.enriched_blood": "Enriched Blood",
+
   "item.bloodisfuel.viscera_bucket": "Bucket of Viscera",
-
-
+  "item.bloodisfuel.blood_bucket": "Bucket of Blood",
+  "item.bloodisfuel.enriched_blood_bucket": "Bucket of Enriched Blood",
 
   "item.bloodisfuel.ground_meat": "Ground Meat",
 
