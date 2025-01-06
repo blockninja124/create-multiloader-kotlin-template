@@ -9,7 +9,8 @@ import net.minecraft.world.item.Item;
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
 
 public class BIF_Items {
-    public static final ItemEntry<Item> GROUND_MEAT = REGISTRATE.item("ground_meat", Item::new)
+    public static final ItemEntry<Item> GROUND_MEAT =
+            REGISTRATE.item("ground_meat", Item::new)
             .properties(p -> p
                     .food(new FoodProperties.Builder()
                     .meat()
