@@ -28,7 +28,7 @@ public class BIF_Fluids {
                             new ResourceLocation("bloodisfuel:block/blood_flow"))
                     .lang("Blood")
                     .properties(b -> b
-                            .viscosity(1500)
+                            .viscosity(1000)
                             .density(500))
                     .fluidProperties(p -> p
                             .levelDecreasePerBlock(2)
@@ -44,7 +44,7 @@ public class BIF_Fluids {
                             new ResourceLocation("bloodisfuel:block/enriched_blood_flow"))
                     .lang("Enriched_Blood")
                     .properties(b -> b
-                            .viscosity(1500)
+                            .viscosity(1250)
                             .density(500))
                     .fluidProperties(p -> p
                             .levelDecreasePerBlock(2)
