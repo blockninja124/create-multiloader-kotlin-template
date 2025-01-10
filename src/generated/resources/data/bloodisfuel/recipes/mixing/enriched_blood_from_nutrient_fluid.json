@@ -1,12 +1,15 @@
 {
   "type": "create:mixing",
+  "heatRequirement": "superheated",
   "ingredients": [
-    {
-      "item": "minecraft:sugar"
-    },
     {
       "amount": 1000,
       "fluid": "bloodisfuel:blood",
+      "nbt": {}
+    },
+    {
+      "amount": 500,
+      "fluid": "biofactory:nutrients_fluid",
       "nbt": {}
     }
   ],

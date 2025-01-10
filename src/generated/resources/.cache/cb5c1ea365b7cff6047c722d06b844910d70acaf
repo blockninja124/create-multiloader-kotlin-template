@@ -1,8 +1,7 @@
-// 1.20.1	2025-01-09T22:07:31.6281744	Create: Blood is Fuel! Processing Recipes
+// 1.20.1	2025-01-09T22:39:37.0011863	Create: Blood is Fuel! Processing Recipes
 617eef63920c0b64aad92c60c17036b4007f82b8 data/bloodisfuel/recipes/emptying/viscera_from_meats.json
-1439f497f2f694e859c58f8861d2551ac239e94e data/bloodisfuel/recipes/mixing/enriched_blood.json
-c1b34eb57a369bd9780b1a63fa3f71c6dc848483 data/bloodisfuel/recipes/mixing/enriched_blood_from_nutrient_bar.json
-6df72b51de2fb090439b2354033d588df0881aca data/bloodisfuel/recipes/mixing/enriched_blood_from_nutrient_paste.json
-fb5f93725fec3f08f06587fb9ddacb8384aad1ce data/bloodisfuel/recipes/mixing/enriched_blood_from_sugars.json
-853884baf42c1f1263aa9e392610c0a8d0ef5d10 data/bloodisfuel/recipes/mixing/nutrient_fluid_to_enriched_blood.json
-dfc47a3e7040ace4c4f58378bb0c2e5af4853dd1 data/bloodisfuel/recipes/mixing/viscera_to_blood.json
+0f7329dbd76d928be3bfeaae1e886cf33f45c17b data/bloodisfuel/recipes/mixing/enriched_blood_from_nutrient_bar.json
+ebca5f2672d609b4e38060ab0e58dce86df18cce data/bloodisfuel/recipes/mixing/enriched_blood_from_nutrient_fluid.json
+60df235ef4b4980762b3f77bb77392ac0a69ed59 data/bloodisfuel/recipes/mixing/enriched_blood_from_nutrient_paste.json
+fe47bc533368bd91a84b9c6d772231c152768a22 data/bloodisfuel/recipes/mixing/enriched_blood_from_sugars.json
+805dc81f9c05aca88994eae29efaf27ea0f1d121 data/bloodisfuel/recipes/mixing/viscera_to_blood.json
