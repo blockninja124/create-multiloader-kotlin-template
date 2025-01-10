@@ -1,0 +1,15 @@
+{
+  "fluid.bloodisfuel.blood": "Blood",
+  "fluid.bloodisfuel.enriched_blood": "Enriched Blood",
+  "fluid.bloodisfuel.viscera": "Viscera",
+
+  "item.bloodisfuel.enriched_blood_bucket": "Bucket of Enriched Blood",
+  "item.bloodisfuel.blood_bucket": "Bucket of Blood",
+  "item.bloodisfuel.viscera_bucket": "Bucket of Viscera",
+
+
+
+  "item.bloodisfuel.ground_meat": "Ground Meat",
+
+  "creativetab.blood_tab": "Blood is Fuel!"
+}
