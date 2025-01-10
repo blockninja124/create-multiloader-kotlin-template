@@ -1,6 +1,5 @@
 package net.electrisoma.bloodisfuel.infrastructure.config;
 
-import com.simibubi.create.content.kinetics.BlockStressValues;
 import com.simibubi.create.foundation.config.ConfigBase;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -1,15 +1,12 @@
 package net.electrisoma.bloodisfuel.infrastructure.data.recipe;
 
 import com.github.elenterius.biofactory.init.ModFluids;
-import com.github.elenterius.biomancy.init.ModFoods;
 import com.github.elenterius.biomancy.init.ModItems;
 import com.github.elenterius.biomancy.init.tags.ModItemTags;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
-import com.simibubi.create.foundation.data.recipe.Mods;
 import net.electrisoma.bloodisfuel.registry.BIF_Fluids;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.item.Items;
 
 @SuppressWarnings({"all"})
 public class MixingRecipeGen extends BloodProcessingRecipeGen {
