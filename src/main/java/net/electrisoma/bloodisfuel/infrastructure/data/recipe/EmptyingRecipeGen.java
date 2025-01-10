@@ -11,7 +11,7 @@ public class EmptyingRecipeGen extends BloodProcessingRecipeGen{
         VISCERA_FROM_MEATS =
             create("viscera_from_meats", b -> b
             .require(ModItemTags.RAW_MEATS)
-            .output(BIF_Fluids.VISCERA.get(), 500));
+            .output(BIF_Fluids.VISCERA.get(), 100));
 
     public EmptyingRecipeGen(PackOutput generator) {
         super(generator);

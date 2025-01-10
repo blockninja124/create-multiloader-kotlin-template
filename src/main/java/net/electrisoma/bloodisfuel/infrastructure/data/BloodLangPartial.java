@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel.registry;
+package net.electrisoma.bloodisfuel.infrastructure.data;
 
 import java.util.function.BiConsumer;
 

@@ -3,7 +3,6 @@ package net.electrisoma.bloodisfuel.infrastructure.data;
 import com.tterrag.registrate.providers.ProviderType;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.electrisoma.bloodisfuel.infrastructure.data.recipe.BloodProcessingRecipeGen;
-import net.electrisoma.bloodisfuel.registry.BloodLangPartial;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.data.event.GatherDataEvent;
