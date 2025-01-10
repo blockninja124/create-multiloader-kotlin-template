@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "biomancy:nutrient_bar"
+    },
+    {
+      "amount": 1000,
+      "fluid": "bloodisfuel:blood",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "fluid": "bloodisfuel:enriched_blood"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "biomancy:sugars"
+    },
+    {
+      "amount": 1000,
+      "fluid": "bloodisfuel:blood",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "fluid": "bloodisfuel:enriched_blood"
+    }
+  ]
+}

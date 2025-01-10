@@ -1,0 +1,13 @@
+{
+  "block.bloodisfuel.blood": "Blood",
+  "block.bloodisfuel.enriched_blood": "Enriched Blood",
+  "block.bloodisfuel.viscera": "Viscera",
+  "fluid.bloodisfuel.blood": "Blood",
+  "fluid.bloodisfuel.enriched_blood": "Enriched Blood",
+  "fluid.bloodisfuel.viscera": "Viscera",
+  "item.bloodisfuel.blood_bucket": "Blood Bucket",
+  "item.bloodisfuel.enriched_blood_bucket": "Enriched Blood Bucket",
+  "item.bloodisfuel.ground_meat": "Ground Meat",
+  "item.bloodisfuel.viscera_bucket": "Viscera Bucket",
+  "itemGroup.bloodisfuel.base": "Create: Blood is Fuel!"
+}
