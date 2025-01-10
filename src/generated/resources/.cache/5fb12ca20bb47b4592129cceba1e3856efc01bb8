@@ -1,0 +1,20 @@
+// 1.20.1	2025-01-09T18:18:20.7203375	Registrate Provider for bloodisfuel [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+681df28f39530a0c24b90dc738fc06fe7dbf1031 assets/bloodisfuel/blockstates/blood.json
+c15901822be37517b9c7f5d070a1fc486db61469 assets/bloodisfuel/blockstates/enriched_blood.json
+38bc35bb5cb71d92e4f50a07914176a1318ad56b assets/bloodisfuel/blockstates/viscera.json
+d2f1f21bdd1068856b6803bf65b711425d45f9ea assets/bloodisfuel/lang/en_ud.json
+9f63fa5c75ab885a52d87809f692be9ac8927d45 assets/bloodisfuel/lang/en_us.json
+f6db5585449b9d736c7ff77437c822f2be33cb29 assets/bloodisfuel/models/block/blood.json
+9e1d8bc33bfb002d74eed91cad91b90031bfd00f assets/bloodisfuel/models/block/enriched_blood.json
+db95d8ec6fdd5f86e55797a35e7af596465447e4 assets/bloodisfuel/models/block/viscera.json
+748196372f90cb8065487e56dfcc646ef58d12b5 assets/bloodisfuel/models/item/blood_bucket.json
+e0781e1cb72cab35cd64c85c1b92df1b2433848b assets/bloodisfuel/models/item/enriched_blood_bucket.json
+9a81b2227e08d0966ad0c62f7401dd6a9aa7d539 assets/bloodisfuel/models/item/ground_meat.json
+f234f1e1d9c6c58a4de3748f5703b4739eda8916 assets/bloodisfuel/models/item/viscera_bucket.json
+fe72549d6f8429dfa2cffd055da31b5066f18f10 data/bloodisfuel/tags/fluids/enriched_blood.json
+48446df96fcbb5fc313ef0f1e20cf385010e34ea data/bloodisfuel/tags/fluids/viscera.json
+4a4d79d9e3ffba2f80f509df3d4d19b054233eee data/forge/tags/fluids/blood.json
+8bc36a8be3575381dcb32e44a56e51f5d8c98a42 data/forge/tags/items/buckets/blood.json
+6a192a6be337d6fcec7bcccc53cefb8eab9003e2 data/forge/tags/items/buckets/enriched_blood.json
+08d6e5b0c1612a7a89da1ea93fb6219d2a82b048 data/forge/tags/items/buckets/viscera.json
+2e8d1c6b7aa56317c0d2a1013416b1c100886bb1 data/forge/tags/items/ground_meat.json
