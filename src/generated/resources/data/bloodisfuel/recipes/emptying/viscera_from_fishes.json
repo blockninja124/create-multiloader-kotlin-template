@@ -1,0 +1,14 @@
+{
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "tag": "bloodisfuel:fishes"
+    }
+  ],
+  "results": [
+    {
+      "amount": 25,
+      "fluid": "bloodisfuel:viscera"
+    }
+  ]
+}

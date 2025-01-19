@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "bloodisfuel:meats"
+    }
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "fluid": "bloodisfuel:viscera"
+    }
+  ]
+}
