@@ -1,0 +1,15 @@
+{
+  "type":"createaddition:liquid_burning",
+  "input": {
+    "fluidTag": "bloodisfuel:oil_enriched_blood",
+    "amount": 1000
+  },
+  "burnTime": 9000,
+  "superheated": true,
+  "conditions": [
+    {
+      "fluidTag": "bloodisfuel:oil_enriched_blood",
+      "type": "createaddition:has_fluid_tag"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 package net.electrisoma.bloodisfuel.registry;
 
-import com.tterrag.registrate.util.entry.ItemEntry;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+
+import com.tterrag.registrate.util.entry.ItemEntry;
+
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,6 +15,7 @@ import net.minecraft.world.item.Rarity;
 
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
 
+
 @SuppressWarnings({"unused", "deprecation", "all"})
 public class BIF_Items {
     public static final ItemEntry<Item> GROUND_MEAT =
@@ -21,7 +24,6 @@ public class BIF_Items {
                             .withExistingParent(c.getId().getPath(),
                             new ResourceLocation("item/generated")).texture("layer0",
                             new ResourceLocation(BloodIsFuel.MOD_ID,"item/" + c.getId().getPath())))
-
                     .properties(p -> p
                     .rarity(Rarity.COMMON)
                     .food(new FoodProperties.Builder()

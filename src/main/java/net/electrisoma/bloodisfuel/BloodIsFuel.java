@@ -1,10 +1,13 @@
 package net.electrisoma.bloodisfuel;
 
-import com.mojang.logging.LogUtils;
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.electrisoma.bloodisfuel.infrastructure.config.BloodConfigs;
+import net.electrisoma.bloodisfuel.config.BloodConfigs;
 import net.electrisoma.bloodisfuel.infrastructure.data.BloodDatagen;
 import net.electrisoma.bloodisfuel.registry.*;
+
+import com.simibubi.create.foundation.data.CreateRegistrate;
+
+import com.mojang.logging.LogUtils;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +18,9 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
 import org.slf4j.Logger;
+
 
 @SuppressWarnings({"removal","all"})
 @Mod(BloodIsFuel.MOD_ID)
@@ -29,10 +34,9 @@ public class BloodIsFuel
 
     public BloodIsFuel()
     {
-        ModLoadingContext modLoadingContext = ModLoadingContext.get();
-
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
+        ModLoadingContext modLoadingContext = ModLoadingContext.get();
 
         REGISTRATE.registerEventListeners(modEventBus);
 
@@ -47,11 +51,10 @@ public class BloodIsFuel
         modEventBus.addListener(BloodIsFuel::init);
         modEventBus.addListener(EventPriority.LOWEST, BloodDatagen::gatherData);
 
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> BloodClient.onCtorClient(modEventBus, forgeEventBus));
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> BloodClient::new);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 
     public static void init(final FMLCommonSetupEvent event) {

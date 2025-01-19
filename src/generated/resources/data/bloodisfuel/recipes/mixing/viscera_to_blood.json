@@ -4,8 +4,7 @@
   "ingredients": [
     {
       "amount": 1000,
-      "fluid": "bloodisfuel:viscera",
-      "nbt": {}
+      "fluidTag": "bloodisfuel:viscera"
     }
   ],
   "results": [

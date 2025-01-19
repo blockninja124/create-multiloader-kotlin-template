@@ -2,9 +2,11 @@ package net.electrisoma.bloodisfuel.registry;
 
 import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import com.simibubi.create.foundation.utility.Color;
 import com.tterrag.registrate.builders.FluidBuilder.FluidTypeFactory;
 import com.tterrag.registrate.util.entry.FluidEntry;
+
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.FogRenderer.FogMode;
@@ -16,78 +18,145 @@ import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
+
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector3f;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import static net.electrisoma.bloodisfuel.infrastructure.config.BloodConfigs.client;
+import static net.electrisoma.bloodisfuel.config.BloodConfigs.client;
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
+
 
 public class BIF_Fluids { static {
     REGISTRATE.setCreativeTab(CreativeTabs.BASE_CREATIVE_TAB);
 }
 
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> VISCERA = REGISTRATE
-                    .standardFluid("viscera",
-                            SolidRenderedPlaceableFluidType.create(0xDF591C,
-                                () -> 1f / 4f * client().visceraTransparencyMultiplier.getF()))
-                    .lang("Viscera")
-                    .properties(b -> b
-                            .viscosity(1500)
-                            .density(500))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(2)
-                            .tickRate(25)
-                            .slopeFindDistance(3)
-                            .explosionResistance(100f))
-                    .tag(BloodTags.AllFluidTags.VISCERA.tag)
-                    .source(ForgeFlowingFluid.Source::new)
-                    .bucket()
-                    .tag(BloodTags.forgeItemTag("buckets/viscera"))
-                    .build()
-                    .register();
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            VISCERA = REGISTRATE
+            .standardFluid("viscera",
+                    SolidRenderedPlaceableFluidType.create(0xFF7350,
+                            () -> 1f / 4f * client().visceraTransparencyMultiplier.getF()))
+            .lang("Viscera")
+            .properties(b -> b
+                    .viscosity(1500)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .source(ForgeFlowingFluid.Source::new)
+            .bucket()
+            .tag(BloodTags.forgeItemTag("buckets/viscera"))
+            .build()
+            .register();
 
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> BLOOD = REGISTRATE
-                    .standardFluid("blood",
-                            SolidRenderedPlaceableFluidType.create(0xBD3228,
-                                () -> 1f / 4f * client().bloodTransparencyMultiplier.getF()))
-                    .lang("Blood")
-                    .properties(b -> b
-                            .viscosity(1000)
-                            .density(500))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(2)
-                            .tickRate(25)
-                            .slopeFindDistance(3)
-                            .explosionResistance(100f))
-                    .tag(BloodTags.AllFluidTags.BLOOD.tag)
-                    .source(ForgeFlowingFluid.Source::new)
-                    .bucket()
-                    .tag(BloodTags.forgeItemTag("buckets/blood"))
-                    .build()
-                    .register();
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            BLOOD = REGISTRATE
+            .standardFluid("blood",
+                    SolidRenderedPlaceableFluidType.create(0xBD3228,
+                            () -> 1f / 4f * client().bloodTransparencyMultiplier.getF()))
+            .lang("Blood")
+            .properties(b -> b
+                    .viscosity(1000)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .tag(BloodTags.AllFluidTags.BLOOD.tag)
+            .source(ForgeFlowingFluid.Source::new)
+            .bucket()
+            .tag(BloodTags.forgeItemTag("buckets/blood"))
+            .build()
+            .register();
 
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> ENRICHED_BLOOD = REGISTRATE
-                    .standardFluid("enriched_blood",
-                            SolidRenderedPlaceableFluidType.create(0xDD2012,
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            ENRICHED_BLOOD = REGISTRATE
+            .standardFluid("enriched_blood",
+                    SolidRenderedPlaceableFluidType.create(0xDD2012,
                                 () -> 1f / 4f * client().enrichedBloodTransparencyMultiplier.getF()))
-                    .lang("Enriched Blood")
-                    .properties(b -> b
-                            .viscosity(1250)
-                            .density(500))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(2)
-                            .tickRate(25)
-                            .slopeFindDistance(3)
-                            .explosionResistance(100f))
-                    .tag(BloodTags.AllFluidTags.ENRICHED_BLOOD.tag)
+            .lang("Enriched Blood")
+            .properties(b -> b
+                    .viscosity(1250)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .tag(BloodTags.AllFluidTags.ENRICHED_BLOOD.tag)
                     .source(ForgeFlowingFluid.Source::new)
                     .bucket()
                     .tag(BloodTags.forgeItemTag("buckets/enriched_blood"))
                     .build()
                     .register();
+
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            OIL_ENRICHED_BLOOD = REGISTRATE
+            .standardFluid("oil_enriched_blood",
+                    SolidRenderedPlaceableFluidType.create(0xDD2012,
+                            () -> 1f / 4f * client().oilEnrichedBloodTransparencyMultiplier.getF()))
+            .lang("Oil Enriched Blood")
+            .properties(b -> b
+                    .viscosity(1250)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .tag(BloodTags.AllFluidTags.OIL_ENRICHED_BLOOD.tag)
+            .source(ForgeFlowingFluid.Source::new)
+            .bucket()
+            .tag(BloodTags.forgeItemTag("buckets/oil_enriched_blood"))
+            .build()
+            .register();
+
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            DIESEL_INFUSED_BLOOD = REGISTRATE
+            .standardFluid("diesel_infused_blood",
+                    SolidRenderedPlaceableFluidType.create(0xDD2012,
+                            () -> 1f / 4f * client().dieselInfusedBloodTransparencyMultiplier.getF()))
+            .lang("Diesel Infused Blood")
+            .properties(b -> b
+                    .viscosity(1250)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .tag(BloodTags.AllFluidTags.DIESEL_INFUSED_BLOOD.tag)
+            .source(ForgeFlowingFluid.Source::new)
+            .bucket()
+            .tag(BloodTags.forgeItemTag("buckets/diesel_infused_blood"))
+            .build()
+            .register();
+
+    public static final FluidEntry<ForgeFlowingFluid.Flowing>
+            GASOLINE_INFUSED_BLOOD = REGISTRATE
+            .standardFluid("gasoline_infused_blood",
+                    SolidRenderedPlaceableFluidType.create(0xDD2012,
+                            () -> 1f / 4f * client().gasolineInfusedBloodTransparencyMultiplier.getF()))
+            .lang("Gasoline Infused Blood")
+            .properties(b -> b
+                    .viscosity(1250)
+                    .density(500))
+            .fluidProperties(p -> p
+                    .levelDecreasePerBlock(2)
+                    .tickRate(25)
+                    .slopeFindDistance(3)
+                    .explosionResistance(100f))
+            .tag(BloodTags.AllFluidTags.GASOLINE_INFUSED_BLOOD.tag)
+            .source(ForgeFlowingFluid.Source::new)
+            .bucket()
+            .tag(BloodTags.forgeItemTag("buckets/gasoline_infused_blood"))
+            .build()
+            .register();
 
     public static void register() {}
 

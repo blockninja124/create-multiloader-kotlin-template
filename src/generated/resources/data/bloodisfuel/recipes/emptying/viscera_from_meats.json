@@ -2,12 +2,12 @@
   "type": "create:emptying",
   "ingredients": [
     {
-      "tag": "biomancy:raw_meats"
+      "tag": "bloodisfuel:meats"
     }
   ],
   "results": [
     {
-      "amount": 500,
+      "amount": 100,
       "fluid": "bloodisfuel:viscera"
     }
   ]

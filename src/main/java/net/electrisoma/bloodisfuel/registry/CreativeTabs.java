@@ -1,11 +1,15 @@
 package net.electrisoma.bloodisfuel.registry;
 
+import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.utility.Components;
+
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
+
 import it.unimi.dsi.fastutil.objects.*;
-import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.BakedModel;
@@ -18,6 +22,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
 import org.apache.commons.lang3.mutable.MutableObject;
 
 import java.util.LinkedList;
@@ -26,6 +31,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
+
 
 public class CreativeTabs {
     private static final DeferredRegister<CreativeModeTab> REGISTER =

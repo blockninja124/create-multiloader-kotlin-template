@@ -1,7 +1,9 @@
 package net.electrisoma.bloodisfuel.registry;
 
-import com.simibubi.create.foundation.utility.Lang;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+
+import com.simibubi.create.foundation.utility.Lang;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -20,9 +22,11 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
+
 import java.util.Collections;
 
 import static net.electrisoma.bloodisfuel.registry.BloodTags.NameSpace.FORGE;
+
 
 @SuppressWarnings({"all"})
 public class BloodTags {
@@ -179,7 +183,12 @@ public class BloodTags {
 
         VISCERA,
         BLOOD(FORGE),
-        ENRICHED_BLOOD
+        ENRICHED_BLOOD,
+        OIL_ENRICHED_BLOOD,
+        DIESEL_INFUSED_BLOOD,
+        GASOLINE_INFUSED_BLOOD,
+        CRUDE_OIL(FORGE),
+        FUEL(FORGE)
 
         ;
 

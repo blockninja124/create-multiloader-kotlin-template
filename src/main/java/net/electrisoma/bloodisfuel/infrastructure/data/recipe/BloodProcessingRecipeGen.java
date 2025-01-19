@@ -7,6 +7,8 @@ import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.RegisteredObjects;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+import net.electrisoma.bloodisfuel.Mods;
+import net.electrisoma.bloodisfuel.infrastructure.data.recipe.compat.DistillationRecipeGen;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
@@ -25,10 +27,13 @@ public abstract class BloodProcessingRecipeGen extends CreateRecipeProvider {
 
     protected static final List<BloodProcessingRecipeGen> GENERATORS = new ArrayList<>();
 
-
     public static void registerAll(DataGenerator gen, PackOutput output) {
         GENERATORS.add(new MixingRecipeGen(output));
         GENERATORS.add(new EmptyingRecipeGen(output));
+        GENERATORS.add(new CompactingRecipeGen(output));
+        GENERATORS.add(new DistillationRecipeGen(output));
+        //GENERATORS.add(new LiquidBurningRecipeGen(output));
+
 
         gen.addProvider(true, new DataProvider() {
 

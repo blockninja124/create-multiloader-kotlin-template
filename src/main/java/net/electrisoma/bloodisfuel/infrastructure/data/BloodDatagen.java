@@ -1,8 +1,13 @@
 package net.electrisoma.bloodisfuel.infrastructure.data;
 
-import com.tterrag.registrate.providers.ProviderType;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+import net.electrisoma.bloodisfuel.infrastructure.LangPartial;
+import net.electrisoma.bloodisfuel.infrastructure.data.advancements.AllAdvancements;
 import net.electrisoma.bloodisfuel.infrastructure.data.recipe.BloodProcessingRecipeGen;
+
+import com.tterrag.registrate.providers.ProviderType;
+
+import net.electrisoma.bloodisfuel.infrastructure.data.tags.BloodRegistrateTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -18,18 +23,23 @@ public class BloodDatagen {
 
 		if (event.includeServer()) {
 
+			generator.addProvider(true, new AllAdvancements(output));
 			BloodProcessingRecipeGen.registerAll(generator, output);
 		}
 	}
 
 	private static void addExtraRegistrateData() {
+		BloodRegistrateTags.addGenerators();
+
 		BloodIsFuel.REGISTRATE.addDataGenerator(ProviderType.LANG, provider -> {
 			BiConsumer<String, String> langConsumer = provider::add;
 
+			AllAdvancements.provideLang(langConsumer);
 			providePartialLang(langConsumer);
 		});
 	}
 
 	private static void providePartialLang(BiConsumer<String, String> consumer) {
-		BloodLangPartial.provideLang(consumer);
-	}}
+		LangPartial.provideLang(consumer);
+	}
+}
