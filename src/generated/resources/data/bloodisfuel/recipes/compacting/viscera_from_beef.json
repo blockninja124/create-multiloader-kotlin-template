@@ -1,0 +1,18 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    }
+  ],
+  "results": [
+    {
+      "chance": 0.4,
+      "item": "minecraft:beef"
+    },
+    {
+      "amount": 100,
+      "fluid": "bloodisfuel:viscera"
+    }
+  ]
+}

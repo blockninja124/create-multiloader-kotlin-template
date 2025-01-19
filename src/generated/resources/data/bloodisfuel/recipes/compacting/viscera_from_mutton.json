@@ -2,10 +2,14 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "tag": "bloodisfuel:meats"
+      "item": "minecraft:mutton"
     }
   ],
   "results": [
+    {
+      "chance": 0.4,
+      "item": "minecraft:mutton"
+    },
     {
       "amount": 100,
       "fluid": "bloodisfuel:viscera"

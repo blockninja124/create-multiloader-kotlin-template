@@ -1,0 +1,18 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:tropical_fish"
+    }
+  ],
+  "results": [
+    {
+      "chance": 0.4,
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "amount": 25,
+      "fluid": "bloodisfuel:viscera"
+    }
+  ]
+}
