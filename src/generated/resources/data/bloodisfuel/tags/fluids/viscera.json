@@ -1,0 +1,13 @@
+{
+  "values": [
+    "bloodisfuel:flowing_viscera",
+    {
+      "id": "biomesoplenty:blood",
+      "required": false
+    },
+    {
+      "id": "tconstruct:meat_soup",
+      "required": false
+    }
+  ]
+}
