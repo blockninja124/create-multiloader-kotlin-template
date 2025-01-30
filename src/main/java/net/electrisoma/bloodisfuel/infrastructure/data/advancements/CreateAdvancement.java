@@ -2,10 +2,6 @@ package net.electrisoma.bloodisfuel.infrastructure.data.advancements;
 
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
-
 import com.simibubi.create.foundation.utility.Components;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 
@@ -27,20 +23,25 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
+import java.util.Objects;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.UnaryOperator;
 
+@SuppressWarnings("all")
 public class CreateAdvancement {
 
     static final ResourceLocation BACKGROUND = BloodIsFuel.asResource("textures/gui/advancements.png");
     static final String LANG = "advancement." + BloodIsFuel.MOD_ID + ".";
-    static final String SECRET_SUFFIX = "\n\u00A77(Hidden Advancement)";
+    static final String SECRET_SUFFIX = "\n§7(Hidden Advancement)";
 
-    private Advancement.Builder builder;
+    private final Advancement.Builder builder;
     private SimpleCreateTrigger builtinTrigger;
     private CreateAdvancement parent;
 
     Advancement datagenResult;
 
-    private String id;
+    private final String id;
     private String title;
     private String description;
 
@@ -77,7 +78,7 @@ public class CreateAdvancement {
     public boolean isAlreadyAwardedTo(Player player) {
         if (!(player instanceof ServerPlayer sp))
             return true;
-        Advancement advancement = sp.getServer()
+        Advancement advancement = Objects.requireNonNull(sp.getServer())
                 .getAdvancements()
                 .getAdvancement(BloodIsFuel.asResource(id));
         if (advancement == null)
@@ -118,10 +119,10 @@ public class CreateAdvancement {
 
         ;
 
-        private FrameType frame;
-        private boolean toast;
-        private boolean announce;
-        private boolean hide;
+        private final FrameType frame;
+        private final boolean toast;
+        private final boolean announce;
+        private final boolean hide;
 
         private TaskType(FrameType frame, boolean toast, boolean announce, boolean hide) {
             this.frame = frame;
@@ -204,7 +205,5 @@ public class CreateAdvancement {
             keyIndex++;
             return this;
         }
-
     }
-
 }

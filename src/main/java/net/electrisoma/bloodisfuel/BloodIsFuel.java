@@ -3,12 +3,17 @@ package net.electrisoma.bloodisfuel;
 import net.electrisoma.bloodisfuel.config.BloodConfigs;
 import net.electrisoma.bloodisfuel.infrastructure.data.BloodDatagen;
 import net.electrisoma.bloodisfuel.registry.*;
+import net.electrisoma.bloodisfuel.registry.blocks.BIF_Blocks;
+import net.electrisoma.bloodisfuel.registry.fluids.BIF_Fluids;
+import net.electrisoma.bloodisfuel.registry.items.BIF_Items;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
-
-import com.mojang.logging.LogUtils;
-
+import com.simibubi.create.foundation.item.ItemDescription;
+import com.simibubi.create.foundation.item.KineticStats;
+import com.simibubi.create.foundation.item.TooltipHelper;
+import com.simibubi.create.foundation.item.TooltipModifier;
 import net.minecraft.resources.ResourceLocation;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -18,6 +23,8 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import com.mojang.logging.LogUtils;
 
 import org.slf4j.Logger;
 
@@ -32,6 +39,13 @@ public class BloodIsFuel
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
+    static {
+        REGISTRATE.setTooltipModifierFactory(item -> {
+            return new ItemDescription.Modifier(item, TooltipHelper.Palette.STANDARD_CREATE)
+                    .andThen(TooltipModifier.mapNull(KineticStats.create(item)));
+        });
+    }
+
     public BloodIsFuel()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,7 +54,7 @@ public class BloodIsFuel
 
         REGISTRATE.registerEventListeners(modEventBus);
 
-        BloodTags.init();
+        BIF_Tags.init();
         CreativeTabs.register(modEventBus);
         BIF_Blocks.register();
         BIF_Items.register();
@@ -53,7 +67,6 @@ public class BloodIsFuel
 
         DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> BloodClient::new);
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -63,5 +76,4 @@ public class BloodIsFuel
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
-
 }

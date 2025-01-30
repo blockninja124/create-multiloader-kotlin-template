@@ -6,6 +6,7 @@ import java.util.List;
 import net.minecraft.advancements.CriteriaTriggers;
 
 
+@SuppressWarnings("unused")
 public class AllTriggers {
 
     private static final List<CriterionTriggerBase<?>> triggers = new LinkedList<>();

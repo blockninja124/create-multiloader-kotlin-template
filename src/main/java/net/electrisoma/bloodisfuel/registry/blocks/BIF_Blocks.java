@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel.registry;
+package net.electrisoma.bloodisfuel.registry.blocks;
 
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 
@@ -7,11 +7,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 
+@SuppressWarnings("unused")
 public class BIF_Blocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BloodIsFuel.MOD_ID);
 
     public static void register() {
-
     }
 }

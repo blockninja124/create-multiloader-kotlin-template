@@ -4,16 +4,12 @@ import net.electrisoma.bloodisfuel.BloodIsFuel;
 
 import com.google.common.collect.Maps;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.CriterionTrigger;
 import net.minecraft.advancements.critereon.AbstractCriterionTriggerInstance;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -23,8 +19,7 @@ import java.util.Set;
 import java.util.function.Supplier;
 
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
+@SuppressWarnings("all")
 public abstract class CriterionTriggerBase<T extends CriterionTriggerBase.Instance> implements CriterionTrigger<T> {
 
     public CriterionTriggerBase(String id) {
@@ -62,7 +57,7 @@ public abstract class CriterionTriggerBase<T extends CriterionTriggerBase.Instan
         return id;
     }
 
-    protected void trigger(ServerPlayer player, @Nullable List<Supplier<Object>> suppliers) {
+    protected void trigger(ServerPlayer player, List<Supplier<Object>> suppliers) {
         PlayerAdvancements playerAdvancements = player.getAdvancements();
         Set<Listener<T>> playerListeners = this.listeners.get(playerAdvancements);
         if (playerListeners != null) {
@@ -86,7 +81,7 @@ public abstract class CriterionTriggerBase<T extends CriterionTriggerBase.Instan
             super(idIn, predicate);
         }
 
-        protected abstract boolean test(@Nullable List<Supplier<Object>> suppliers);
+        protected abstract boolean test(List<Supplier<Object>> suppliers);
     }
 
 }

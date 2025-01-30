@@ -1,0 +1,7 @@
+{
+  "fluids": [
+    "bloodisfuel:diesel_infused_blood",
+    "bloodisfuel:gasoline_infused_blood"
+  ],
+  "fuel_ticks": 1100
+}

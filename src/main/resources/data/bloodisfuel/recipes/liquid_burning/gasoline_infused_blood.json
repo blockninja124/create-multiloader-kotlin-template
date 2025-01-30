@@ -4,7 +4,7 @@
     "fluidTag": "bloodisfuel:gasoline_infused_blood",
     "amount": 1000
   },
-  "burnTime": 10000,
+  "burnTime": 64000,
   "superheated": true,
   "conditions": [
     {

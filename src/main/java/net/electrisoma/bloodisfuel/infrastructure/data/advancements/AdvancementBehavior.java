@@ -14,17 +14,16 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.util.FakePlayer;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 
+@SuppressWarnings("all")
 public class AdvancementBehavior extends BlockEntityBehaviour {
 
     public static final BehaviourType<AdvancementBehavior> TYPE = new BehaviourType<>();
 
     private UUID playerId;
-    private Set<CreateAdvancement> advancements;
+    private final Set<CreateAdvancement> advancements;
 
     public AdvancementBehavior(SmartBlockEntity be, CreateAdvancement... advancements) {
         super(be);
@@ -33,8 +32,7 @@ public class AdvancementBehavior extends BlockEntityBehaviour {
     }
 
     public void add(CreateAdvancement... advancements) {
-        for (CreateAdvancement advancement : advancements)
-            this.advancements.add(advancement);
+        this.advancements.addAll(Arrays.asList(advancements));
     }
 
     public boolean isOwnerPresent() {
@@ -58,8 +56,6 @@ public class AdvancementBehavior extends BlockEntityBehaviour {
 
     private void removeAwarded() {
         Player player = getPlayer();
-        if (player == null)
-            return;
         advancements.removeIf(c -> c.isAlreadyAwardedTo(player));
         if (advancements.isEmpty()) {
             playerId = null;
@@ -69,8 +65,6 @@ public class AdvancementBehavior extends BlockEntityBehaviour {
 
     public void awardPlayerIfNear(CreateAdvancement advancement, int maxDistance) {
         Player player = getPlayer();
-        if (player == null)
-            return;
         if (player.distanceToSqr(Vec3.atCenterOf(getPos())) > maxDistance * maxDistance)
             return;
         award(advancement, player);
@@ -78,8 +72,6 @@ public class AdvancementBehavior extends BlockEntityBehaviour {
 
     public void awardPlayer(CreateAdvancement advancement) {
         Player player = getPlayer();
-        if (player == null)
-            return;
         award(advancement, player);
     }
 
@@ -92,7 +84,7 @@ public class AdvancementBehavior extends BlockEntityBehaviour {
     private Player getPlayer() {
         if (playerId == null)
             return null;
-        return getWorld().getPlayerByUUID(playerId);
+        return Objects.requireNonNull(getWorld().getPlayerByUUID(playerId));
     }
 
     @Override

@@ -1,17 +1,18 @@
 package net.electrisoma.bloodisfuel.infrastructure.data.advancements;
 
 import net.electrisoma.bloodisfuel.infrastructure.data.advancements.CreateAdvancement.Builder;
-import net.electrisoma.bloodisfuel.registry.BIF_Fluids;
+import net.electrisoma.bloodisfuel.registry.fluids.BIF_Fluids;
+import net.electrisoma.bloodisfuel.registry.items.BIF_Items;
 
 import com.google.common.collect.Sets;
 
-import net.electrisoma.bloodisfuel.registry.BIF_Items;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.PackOutput.PathProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -25,31 +26,35 @@ import java.util.function.UnaryOperator;
 import static net.electrisoma.bloodisfuel.infrastructure.data.advancements.CreateAdvancement.TaskType.*;
 
 
+@SuppressWarnings("all")
 public class AllAdvancements implements DataProvider {
 
     public static final List<CreateAdvancement> ENTRIES = new ArrayList<>();
     public static final CreateAdvancement START = null,
 
-    /*
-     * Some ids have trailing 0's to modify their vertical position on the tree
-     * (Advancement ordering seems to be deterministic but hash based)
-     */
-
+    // Blood - Root
     ROOT = create("root", b -> b
-            .icon(BIF_Items.GROUND_MEAT)
+            .icon(BIF_Items.DRAINED_MEAT)
             .title("Blood is Fuel!")
             .description("Here Be Meat")
             .awardedForFree()
             .special(NORMAL)),
 
     // Blood - Start
-
     VISCERA = create("viscera", b -> b
             .icon(() -> BIF_Fluids.VISCERA.getBucket().get().getDefaultInstance().getItem())
             .title("Into the Fire")
             .description("The meat hath begun...")
             .after(ROOT)
             .whenIconCollected()
+            .special(NORMAL)),
+
+    DRAINED_MEAT = create("drained_meat", b -> b
+            .icon(Items.BEEF)
+            .title("Poor fella")
+            .description("Obtain the drained remains of a mob")
+            .after(ROOT)
+            .whenItemCollected(BIF_Items.DRAINED_MEAT)
             .special(NORMAL)),
 
     BLOOD = create("blood", b -> b
@@ -77,9 +82,16 @@ public class AllAdvancements implements DataProvider {
             .after(ENRICHED_BLOOD)
             .whenIconCollected()
             .special(NOISY)),
-    // Blood - Hidden
 
-    //
+    // Blood - Hidden
+//    FLAMING_BLOOD_THROWER = create("flaming_blood_thrower", b -> b
+//            .icon(() -> BIF_Fluids.OIL_ENRICHED_BLOOD.getBucket().get().getDefaultInstance().getItem())
+//            .title("A One Machine Army")
+//            .description("Obtain a bucket of oil enriched blood")
+//            .after(OIL_ENRICHED_BLOOD)
+//            .whenItemCollected(BIF_Items.DRAINED_MEAT)
+//            .special(SECRET)),
+
     END = null;
 
     private static CreateAdvancement create(String id, UnaryOperator<Builder> b) {
@@ -87,7 +99,6 @@ public class AllAdvancements implements DataProvider {
     }
 
     // Datagen
-
     private final PackOutput output;
 
     public AllAdvancements(PackOutput output) {
@@ -126,5 +137,4 @@ public class AllAdvancements implements DataProvider {
     }
 
     public static void register() {}
-
 }

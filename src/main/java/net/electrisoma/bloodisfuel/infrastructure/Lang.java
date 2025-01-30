@@ -8,6 +8,7 @@ import com.simibubi.create.foundation.utility.LangBuilder;
 import net.minecraft.network.chat.MutableComponent;
 
 
+@SuppressWarnings("unused")
 public class Lang extends com.simibubi.create.foundation.utility.Lang {
 
     public static MutableComponent translateDirect(String key, Object... args) {

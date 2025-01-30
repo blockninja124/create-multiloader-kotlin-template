@@ -4,7 +4,7 @@
     "fluidTag": "bloodisfuel:oil_enriched_blood",
     "amount": 1000
   },
-  "burnTime": 9000,
+  "burnTime": 9600,
   "superheated": true,
   "conditions": [
     {

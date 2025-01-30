@@ -1,0 +1,7 @@
+{
+  "fluids": [
+    "#bloodisfuel:viscera",
+    "bloodisfuel:oil_enriched_blood"
+  ],
+  "fuel_ticks": 125
+}

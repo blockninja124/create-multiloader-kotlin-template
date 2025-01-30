@@ -1,25 +1,33 @@
 {
+  "parent": "bloodisfuel:root",
   "criteria": {
     "0": {
-      "conditions": {},
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bloodisfuel:drained_meat"
+            ]
+          }
+        ]
+      },
       "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
     "announce_to_chat": false,
-    "background": "bloodisfuel:textures/gui/advancements.png",
     "description": {
       "color": "#DBA213",
-      "translate": "advancement.bloodisfuel.root.desc"
+      "translate": "advancement.bloodisfuel.drained_meat.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "bloodisfuel:drained_meat"
+      "item": "minecraft:beef"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.bloodisfuel.root"
+      "translate": "advancement.bloodisfuel.drained_meat"
     }
   },
   "requirements": [

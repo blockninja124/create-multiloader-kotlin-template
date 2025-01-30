@@ -4,7 +4,7 @@
     "fluidTag": "bloodisfuel:enriched_blood",
     "amount": 1000
   },
-  "burnTime": 8000,
+  "burnTime": 24000,
   "superheated": true,
   "conditions": [
     {

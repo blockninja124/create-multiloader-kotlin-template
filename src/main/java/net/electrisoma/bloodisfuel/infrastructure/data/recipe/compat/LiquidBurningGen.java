@@ -1,18 +1,22 @@
 package net.electrisoma.bloodisfuel.infrastructure.data.recipe.compat;
 
+import net.electrisoma.bloodisfuel.infrastructure.data.recipe.BloodProcessingRecipeGen;
+import net.electrisoma.bloodisfuel.registry.fluids.BIF_Fluids;
+
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
-import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
-import net.electrisoma.bloodisfuel.infrastructure.data.recipe.BloodProcessingRecipeGen;
-import net.electrisoma.bloodisfuel.registry.BIF_Fluids;
+
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+
+import java.util.Objects;
+
 
 @SuppressWarnings("unused")
 public class LiquidBurningGen extends BloodProcessingRecipeGen {
     GeneratedRecipe
             VISCERA =
-            create(ResourceLocation.tryParse("viscera"), b -> b
+            create(Objects.requireNonNull(ResourceLocation.tryParse("viscera")), b -> b
                     .require(BIF_Fluids.OIL_ENRICHED_BLOOD.get(), 100)
                     .requiresHeat(HeatCondition.HEATED)
                     .duration(100)

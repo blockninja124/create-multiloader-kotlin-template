@@ -2,21 +2,16 @@ package net.electrisoma.bloodisfuel.infrastructure.data.advancements;
 
 import com.google.gson.JsonObject;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;
 import net.minecraft.advancements.critereon.DeserializationContext;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import java.util.List;
 import java.util.function.Supplier;
 
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@SuppressWarnings("all")
 public class SimpleCreateTrigger extends CriterionTriggerBase<SimpleCreateTrigger.Instance> {
 
     public SimpleCreateTrigger(String id) {
@@ -43,7 +38,7 @@ public class SimpleCreateTrigger extends CriterionTriggerBase<SimpleCreateTrigge
         }
 
         @Override
-        protected boolean test(@Nullable List<Supplier<Object>> suppliers) {
+        protected boolean test(List<Supplier<Object>> suppliers) {
             return true;
         }
     }

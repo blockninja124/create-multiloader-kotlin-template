@@ -25,11 +25,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Collections;
 
-import static net.electrisoma.bloodisfuel.registry.BloodTags.NameSpace.FORGE;
+import static net.electrisoma.bloodisfuel.registry.BIF_Tags.NameSpace.BM;
+import static net.electrisoma.bloodisfuel.registry.BIF_Tags.NameSpace.FORGE;
 
 
 @SuppressWarnings({"all"})
-public class BloodTags {
+public class BIF_Tags {
     public static <T> TagKey<T> optionalTag(IForgeRegistry<T> registry,
                                             ResourceLocation id) {
         return registry.tags()
@@ -130,10 +131,13 @@ public class BloodTags {
     }
 
     public enum AllItemTags {
-            GROUND_MEAT(FORGE),
-            MEATS,
-            FISHES,
-            CARBOHYDRATES
+        SYRINGE_BLADE,
+        RAW_MEATS(BM),
+        MEATS,
+        MODDED_MEATS,
+        FISHES,
+        MODDED_FISHES,
+        CARBOHYDRATES
         ;
 
         public final TagKey<Item> tag;
@@ -182,11 +186,12 @@ public class BloodTags {
     public enum AllFluidTags {
 
         VISCERA,
-        BLOOD(FORGE),
+        BLOOD,
         ENRICHED_BLOOD,
         OIL_ENRICHED_BLOOD,
         DIESEL_INFUSED_BLOOD,
         GASOLINE_INFUSED_BLOOD,
+        LIQUID_CARBOHYDRATES,
         CRUDE_OIL(FORGE),
         FUEL(FORGE)
 

@@ -7,7 +7,7 @@
     },
     {
       "amount": 1000,
-      "fluidTag": "forge:blood"
+      "fluidTag": "bloodisfuel:blood"
     }
   ],
   "results": [

@@ -8,7 +8,7 @@
     },
     {
       "amount": 500,
-      "fluidTag": "forge:blood"
+      "fluidTag": "bloodisfuel:enriched_blood"
     }
   ],
   "results": [

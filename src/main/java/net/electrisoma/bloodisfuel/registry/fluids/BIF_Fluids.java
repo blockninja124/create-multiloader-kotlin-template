@@ -1,4 +1,7 @@
-package net.electrisoma.bloodisfuel.registry;
+package net.electrisoma.bloodisfuel.registry.fluids;
+
+import net.electrisoma.bloodisfuel.registry.BIF_Tags;
+import net.electrisoma.bloodisfuel.registry.CreativeTabs;
 
 import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -29,6 +32,7 @@ import static net.electrisoma.bloodisfuel.config.BloodConfigs.client;
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
 
 
+@SuppressWarnings("all")
 public class BIF_Fluids { static {
     REGISTRATE.setCreativeTab(CreativeTabs.BASE_CREATIVE_TAB);
 }
@@ -37,7 +41,7 @@ public class BIF_Fluids { static {
             VISCERA = REGISTRATE
             .standardFluid("viscera",
                     SolidRenderedPlaceableFluidType.create(0xFF7350,
-                            () -> 1f / 4f * client().visceraTransparencyMultiplier.getF()))
+                            () -> 1f / 32f * client().visceraTransparencyMultiplier.getF()))
             .lang("Viscera")
             .properties(b -> b
                     .viscosity(1500)
@@ -49,7 +53,7 @@ public class BIF_Fluids { static {
                     .explosionResistance(100f))
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
-            .tag(BloodTags.forgeItemTag("buckets/viscera"))
+            .tag(BIF_Tags.forgeItemTag("buckets/viscera"))
             .build()
             .register();
 
@@ -57,7 +61,7 @@ public class BIF_Fluids { static {
             BLOOD = REGISTRATE
             .standardFluid("blood",
                     SolidRenderedPlaceableFluidType.create(0xBD3228,
-                            () -> 1f / 4f * client().bloodTransparencyMultiplier.getF()))
+                            () -> 1f / 16f * client().bloodTransparencyMultiplier.getF()))
             .lang("Blood")
             .properties(b -> b
                     .viscosity(1000)
@@ -67,10 +71,10 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
-            .tag(BloodTags.AllFluidTags.BLOOD.tag)
+            .tag(BIF_Tags.AllFluidTags.BLOOD.tag)
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
-            .tag(BloodTags.forgeItemTag("buckets/blood"))
+            .tag(BIF_Tags.forgeItemTag("buckets/blood"))
             .build()
             .register();
 
@@ -78,7 +82,7 @@ public class BIF_Fluids { static {
             ENRICHED_BLOOD = REGISTRATE
             .standardFluid("enriched_blood",
                     SolidRenderedPlaceableFluidType.create(0xDD2012,
-                                () -> 1f / 4f * client().enrichedBloodTransparencyMultiplier.getF()))
+                                () -> 1f / 8f * client().enrichedBloodTransparencyMultiplier.getF()))
             .lang("Enriched Blood")
             .properties(b -> b
                     .viscosity(1250)
@@ -88,10 +92,10 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
-            .tag(BloodTags.AllFluidTags.ENRICHED_BLOOD.tag)
+            .tag(BIF_Tags.AllFluidTags.ENRICHED_BLOOD.tag)
                     .source(ForgeFlowingFluid.Source::new)
                     .bucket()
-                    .tag(BloodTags.forgeItemTag("buckets/enriched_blood"))
+                    .tag(BIF_Tags.forgeItemTag("buckets/enriched_blood"))
                     .build()
                     .register();
 
@@ -99,7 +103,7 @@ public class BIF_Fluids { static {
             OIL_ENRICHED_BLOOD = REGISTRATE
             .standardFluid("oil_enriched_blood",
                     SolidRenderedPlaceableFluidType.create(0xDD2012,
-                            () -> 1f / 4f * client().oilEnrichedBloodTransparencyMultiplier.getF()))
+                            () -> 1f / 16f * client().oilEnrichedBloodTransparencyMultiplier.getF()))
             .lang("Oil Enriched Blood")
             .properties(b -> b
                     .viscosity(1250)
@@ -109,10 +113,10 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
-            .tag(BloodTags.AllFluidTags.OIL_ENRICHED_BLOOD.tag)
+            .tag(BIF_Tags.AllFluidTags.OIL_ENRICHED_BLOOD.tag)
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
-            .tag(BloodTags.forgeItemTag("buckets/oil_enriched_blood"))
+            .tag(BIF_Tags.forgeItemTag("buckets/oil_enriched_blood"))
             .build()
             .register();
 
@@ -120,7 +124,7 @@ public class BIF_Fluids { static {
             DIESEL_INFUSED_BLOOD = REGISTRATE
             .standardFluid("diesel_infused_blood",
                     SolidRenderedPlaceableFluidType.create(0xDD2012,
-                            () -> 1f / 4f * client().dieselInfusedBloodTransparencyMultiplier.getF()))
+                            () -> 1f / 32f * client().dieselInfusedBloodTransparencyMultiplier.getF()))
             .lang("Diesel Infused Blood")
             .properties(b -> b
                     .viscosity(1250)
@@ -130,10 +134,10 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
-            .tag(BloodTags.AllFluidTags.DIESEL_INFUSED_BLOOD.tag)
+            .tag(BIF_Tags.AllFluidTags.DIESEL_INFUSED_BLOOD.tag)
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
-            .tag(BloodTags.forgeItemTag("buckets/diesel_infused_blood"))
+            .tag(BIF_Tags.forgeItemTag("buckets/diesel_infused_blood"))
             .build()
             .register();
 
@@ -141,7 +145,7 @@ public class BIF_Fluids { static {
             GASOLINE_INFUSED_BLOOD = REGISTRATE
             .standardFluid("gasoline_infused_blood",
                     SolidRenderedPlaceableFluidType.create(0xDD2012,
-                            () -> 1f / 4f * client().gasolineInfusedBloodTransparencyMultiplier.getF()))
+                            () -> 1f / 32f * client().gasolineInfusedBloodTransparencyMultiplier.getF()))
             .lang("Gasoline Infused Blood")
             .properties(b -> b
                     .viscosity(1250)
@@ -151,10 +155,10 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
-            .tag(BloodTags.AllFluidTags.GASOLINE_INFUSED_BLOOD.tag)
+            .tag(BIF_Tags.AllFluidTags.GASOLINE_INFUSED_BLOOD.tag)
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
-            .tag(BloodTags.forgeItemTag("buckets/gasoline_infused_blood"))
+            .tag(BIF_Tags.forgeItemTag("buckets/gasoline_infused_blood"))
             .build()
             .register();
 
@@ -163,8 +167,8 @@ public class BIF_Fluids { static {
     public static abstract class TintedFluidType extends FluidType {
 
         protected static final int NO_TINT = 0xffffffff;
-        private ResourceLocation stillTexture;
-        private ResourceLocation flowingTexture;
+        private final ResourceLocation stillTexture;
+        private final ResourceLocation flowingTexture;
 
         public TintedFluidType(Properties properties, ResourceLocation stillTexture, ResourceLocation flowingTexture) {
             super(properties);

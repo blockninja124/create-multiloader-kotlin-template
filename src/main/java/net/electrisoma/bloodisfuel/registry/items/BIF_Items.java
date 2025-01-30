@@ -1,25 +1,31 @@
-package net.electrisoma.bloodisfuel.registry;
+package net.electrisoma.bloodisfuel.registry.items;
 
+import com.simibubi.create.foundation.data.AssetLookup;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
 
-import net.minecraft.resources.ResourceKey;
+import net.electrisoma.bloodisfuel.registry.BIF_Tags;
+import net.electrisoma.bloodisfuel.registry.CreativeTabs;
+import net.electrisoma.bloodisfuel.registry.items.syringe_blade.SyringeBladeItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Rarity;
 
 import static net.electrisoma.bloodisfuel.BloodIsFuel.REGISTRATE;
 
 
-@SuppressWarnings({"unused", "deprecation", "all"})
+@SuppressWarnings({"all"})
 public class BIF_Items {
-    public static final ItemEntry<Item> GROUND_MEAT =
-            REGISTRATE.item("ground_meat", Item::new)
+    static {
+        REGISTRATE.setCreativeTab(CreativeTabs.BASE_CREATIVE_TAB);
+    }
+
+    public static final ItemEntry<Item> DRAINED_MEAT =
+            REGISTRATE.item("drained_meat", Item::new)
                     .model((c, p) -> p
                             .withExistingParent(c.getId().getPath(),
                             new ResourceLocation("item/generated")).texture("layer0",
@@ -35,18 +41,17 @@ public class BIF_Items {
                     .effect(new MobEffectInstance(MobEffects.POISON,
                             300, 2),0.8f)
                     .build()))
-                    .tag(BloodTags.AllItemTags.GROUND_MEAT.tag)
-                    .lang("Ground Meat")
+                    .lang("Drained Meat")
                     .tab(CreativeTabs.BASE_CREATIVE_TAB.getKey())
                     .register();
 
-    private static ItemEntry<Item> item(String name) {
-        ResourceKey<CreativeModeTab> tab = CreativeTabs.BASE_CREATIVE_TAB.getKey();
-        assert tab != null;
-        return REGISTRATE.item(name, Item::new)
-                .tab(tab)
-                .register();
-    }
+    public static final ItemEntry<SyringeBladeItem>
+            SYRINGE_BLADE = REGISTRATE
+            .item("syringe_blade",
+                    p -> new SyringeBladeItem(Tiers.IRON,3,-2.4f,p))
+            .model(AssetLookup.itemModelWithPartials())
+            .tag(BIF_Tags.AllItemTags.SYRINGE_BLADE.tag)
+            .register();
 
     public static void register() {}
 }

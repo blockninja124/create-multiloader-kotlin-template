@@ -3,6 +3,22 @@
     "minecraft:cod",
     "minecraft:salmon",
     "minecraft:tropical_fish",
-    "minecraft:pufferfish"
+    "minecraft:pufferfish",
+    {
+      "id": "farmersdelight:cod_slice",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:salmon_slice",
+      "required": false
+    },
+    {
+      "id": "born_in_chaos_v1:rotten_fish",
+      "required": false
+    },
+    {
+      "id": "born_in_chaos_v1:sea_terror_eye",
+      "required": false
+    }
   ]
 }

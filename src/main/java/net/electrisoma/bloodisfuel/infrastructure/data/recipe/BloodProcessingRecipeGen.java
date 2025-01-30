@@ -1,14 +1,15 @@
 package net.electrisoma.bloodisfuel.infrastructure.data.recipe;
 
+import net.electrisoma.bloodisfuel.BloodIsFuel;
+import net.electrisoma.bloodisfuel.infrastructure.data.recipe.compat.DistillationRecipeGen;
+
 import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.RegisteredObjects;
-import net.electrisoma.bloodisfuel.BloodIsFuel;
-import net.electrisoma.bloodisfuel.Mods;
-import net.electrisoma.bloodisfuel.infrastructure.data.recipe.compat.DistillationRecipeGen;
+
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
@@ -23,11 +24,14 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
+
+@SuppressWarnings("unused")
 public abstract class BloodProcessingRecipeGen extends CreateRecipeProvider {
 
     protected static final List<BloodProcessingRecipeGen> GENERATORS = new ArrayList<>();
 
     public static void registerAll(DataGenerator gen, PackOutput output) {
+
         GENERATORS.add(new MixingRecipeGen(output));
         GENERATORS.add(new EmptyingRecipeGen(output));
         GENERATORS.add(new CompactingRecipeGen(output));

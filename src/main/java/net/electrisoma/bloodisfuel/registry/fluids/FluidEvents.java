@@ -1,7 +1,9 @@
-package net.electrisoma.bloodisfuel.registry;
+package net.electrisoma.bloodisfuel.registry.fluids;
+
+import net.electrisoma.bloodisfuel.BloodIsFuel;
 
 import com.tterrag.registrate.util.entry.FluidEntry;
-import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
@@ -9,7 +11,8 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Arrays;
 
-@SuppressWarnings("unused")
+
+@SuppressWarnings("all")
 @Mod.EventBusSubscriber(modid = BloodIsFuel.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class FluidEvents {
     @SubscribeEvent
