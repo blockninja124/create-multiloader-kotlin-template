@@ -262,6 +262,10 @@
     {
       "id": "born_in_chaos_v1:spiritual_dust",
       "required": false
+    },
+    {
+      "id": "born_in_chaos_v1:intoxicating_decoction",
+      "required": false
     }
   ]
 }

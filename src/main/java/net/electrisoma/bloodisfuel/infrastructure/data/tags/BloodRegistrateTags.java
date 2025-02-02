@@ -193,9 +193,6 @@ public class BloodRegistrateTags  {
 				new TagGen.CreateTagsProvider<>(provIn, Fluid::builtInRegistryHolder);
 
 		prov.tag(BIF_Tags.AllFluidTags.VISCERA.tag)
-				//BIF
-				.add(TagEntry.element(BIF_Fluids.VISCERA.getId()))
-
 				//BoP
 				.addOptional(Utils.location("biomesoplenty:blood"))
 

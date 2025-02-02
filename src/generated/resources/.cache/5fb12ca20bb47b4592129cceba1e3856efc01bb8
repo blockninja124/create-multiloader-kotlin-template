@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-26T17:27:09.4347347	Registrate Provider for bloodisfuel [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2025-01-31T21:45:54.9177001	Registrate Provider for bloodisfuel [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 681df28f39530a0c24b90dc738fc06fe7dbf1031 assets/bloodisfuel/blockstates/blood.json
 9d679a218f3d9378d2c4eca90ab36cefe2a40a05 assets/bloodisfuel/blockstates/diesel_infused_blood.json
 c15901822be37517b9c7f5d070a1fc486db61469 assets/bloodisfuel/blockstates/enriched_blood.json
@@ -28,10 +28,10 @@ fe72549d6f8429dfa2cffd055da31b5066f18f10 data/bloodisfuel/tags/fluids/enriched_b
 9a274f256a1c61e35b8c8501953e23f2b5e3cd7c data/bloodisfuel/tags/fluids/gasoline_infused_blood.json
 1135106be8f442386e3632f82bc59ff4c72e1ca6 data/bloodisfuel/tags/fluids/liquid_carbohydrates.json
 d2c4ab6876b2d280615f6eeb712dc0875f946410 data/bloodisfuel/tags/fluids/oil_enriched_blood.json
-eaf30d2c86b75f362e62a49d27b9fa6c34b9ad33 data/bloodisfuel/tags/fluids/viscera.json
-ee887020ad5b08e0b4b216914696ac28bd3bc879 data/bloodisfuel/tags/items/carbohydrates.json
+9098c21d9a5eb5d7dd6acb85196e0a91d93b9005 data/bloodisfuel/tags/fluids/viscera.json
+fb50b945bc01538fdd38dd16a9021fad546a2241 data/bloodisfuel/tags/items/carbohydrates.json
 9337bc68a959a67199b5be5a0f95123ecae69c20 data/bloodisfuel/tags/items/fishes.json
-6ce5231b882e6e9c653c9bc33c05d84b8d32ba08 data/bloodisfuel/tags/items/meats.json
+5e5a91458f202df932d56e0fd4decc2776381def data/bloodisfuel/tags/items/meats.json
 9b4d350b3062f75e3892036a1d6404d1c2a8d56e data/bloodisfuel/tags/items/syringe_blade.json
 3581edfa9f86dd71402f83a41df77180e27e05a4 data/forge/tags/fluids/fuel.json
 8bc36a8be3575381dcb32e44a56e51f5d8c98a42 data/forge/tags/items/buckets/blood.json

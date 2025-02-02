@@ -51,6 +51,7 @@ public class BIF_Fluids { static {
                     .tickRate(25)
                     .slopeFindDistance(3)
                     .explosionResistance(100f))
+            .tag(BIF_Tags.AllFluidTags.VISCERA.tag)
             .source(ForgeFlowingFluid.Source::new)
             .bucket()
             .tag(BIF_Tags.forgeItemTag("buckets/viscera"))

@@ -16,7 +16,7 @@ public class MixingRecipeGen extends BloodProcessingRecipeGen {
 
             VISCERA_TO_BLOOD =
             create("viscera_to_blood", b -> b
-                    .require(BIF_Tags.AllFluidTags.VISCERA.tag, 1000)
+                    .require(BIF_Tags.AllFluidTags.VISCERA.tag,1000)
                     .requiresHeat(HeatCondition.HEATED)
                     .output(BIF_Fluids.BLOOD.get(), 500)),
 

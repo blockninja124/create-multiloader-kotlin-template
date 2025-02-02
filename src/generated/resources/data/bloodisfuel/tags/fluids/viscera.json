@@ -1,6 +1,7 @@
 {
   "values": [
     "bloodisfuel:flowing_viscera",
+    "bloodisfuel:viscera",
     {
       "id": "biomesoplenty:blood",
       "required": false
