@@ -1,7 +1,8 @@
-package net.electrisoma.bloodisfuel.fabric.registry;
+package net.electrisoma.bloodisfuel.registry.fabric;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
+import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 

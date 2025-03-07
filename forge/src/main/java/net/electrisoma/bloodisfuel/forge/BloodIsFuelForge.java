@@ -1,7 +1,7 @@
 package net.electrisoma.bloodisfuel.forge;
 
 import net.electrisoma.bloodisfuel.BloodIsFuel;
-import net.electrisoma.bloodisfuel.forge.registry.BModTabImpl;
+import net.electrisoma.bloodisfuel.registry.forge.BModTabImpl;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -14,9 +14,13 @@ public class BloodIsFuelForge {
 
     public BloodIsFuelForge() {
         eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        BModTabImpl.register(BloodIsFuelForge.eventBus);
-
+        BModTabImpl.register(eventBus);
         BloodIsFuel.init();
+
+
     }
+
+//    public static void finalizeRegistrate() {
+//        BloodIsFuel.registrate().registerEventListeners(eventBus);
+//    }
 }

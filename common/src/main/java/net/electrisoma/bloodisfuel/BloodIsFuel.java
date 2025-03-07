@@ -5,12 +5,13 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import net.createmod.catnip.lang.FontHelper.Palette;
 import com.tterrag.registrate.providers.ProviderType;
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import net.createmod.catnip.lang.FontHelper;
-import net.createmod.catnip.lang.LangBuilder;
+
 import net.electrisoma.bloodisfuel.infrastructure.data.BTagGen;
 import net.electrisoma.bloodisfuel.infrastructure.data.lang.BLangGen;
+import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -27,17 +28,27 @@ public class BloodIsFuel {
 
     static {
         REGISTRATE.setTooltipModifierFactory(item -> new
-                ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
+                ItemDescription.Modifier(item, Palette.STANDARD_CREATE)
                 .andThen(TooltipModifier.mapNull(KineticStats.create(item))));
+        Tabs.MAIN.use();
     }
 
     public static void init() {
-        LOGGER.info("{} initializing! Create version: {} on platform: {}", NAME, CreateBuildInfo.VERSION, ExampleExpectPlatform.platformName());
+        //LOGGER.info("{} initializing! Create version: {} on platform: {}", NAME, CreateBuildInfo.VERSION, ExampleExpectPlatform.platformName());
 
         ModSetup.register();
-//        finalizeRegistrate();
+        //finalizeRegistrate();
 
     }
+
+    public static CreateRegistrate registrate() {
+        return REGISTRATE;
+    }
+
+//    @ExpectPlatform
+//    public static void finalizeRegistrate() {
+//        throw new AssertionError();
+//    }
 
     public static void gatherData(DataGenerator.PackGenerator gen) {
         REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BTagGen::generateBlockTags);
@@ -47,10 +58,6 @@ public class BloodIsFuel {
         //gen.addProvider(NumismaticsSequencedAssemblyRecipeGen::new);
         //gen.addProvider(NumismaticsStandardRecipeGen::new);
         //gen.addProvider(NumismaticsAdvancements::new);
-    }
-
-    public static CreateRegistrate registrate() {
-        return REGISTRATE;
     }
 
     public static ResourceLocation asResource(String path) {

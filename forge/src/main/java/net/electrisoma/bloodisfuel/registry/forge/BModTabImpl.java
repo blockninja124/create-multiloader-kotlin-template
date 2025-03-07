@@ -1,10 +1,8 @@
-package net.electrisoma.bloodisfuel.forge.registry;
+package net.electrisoma.bloodisfuel.registry.forge;
 
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
-import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
-import net.electrisoma.bloodisfuel.registry.BModTab.RegistrateDisplayItemsGenerator;
+import net.electrisoma.bloodisfuel.registry.BModTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -29,10 +27,10 @@ public class BModTabImpl {
     public static final RegistryObject<CreativeModeTab> MAIN_TAB =
             TAB_REGISTER.register("main",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.bloodisfuel"))
+                    .title(Component.translatable("itemGroup.bloodisfuel.main"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .icon(() -> Items.BEEF.getDefaultInstance())
-                    .displayItems(new RegistrateDisplayItemsGenerator(Tabs.MAIN))
+                    .displayItems(new BModTab.RegistrateDisplayItemsGenerator(BModTab.Tabs.MAIN))
                     .build());
 
     public static void register(IEventBus modEventBus) {

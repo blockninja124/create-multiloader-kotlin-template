@@ -4,7 +4,7 @@ import java.util.function.BiConsumer;
 
 public class BLangPartial {
     public static void provideLang(BiConsumer<String, String> consumer) {
-        consume(consumer, "itemGroup.bloodisfuel.base", "Create: Blood is Fuel!");
+        consume(consumer, "itemGroup.bloodisfuel.main", "Create: Blood is Fuel!");
 
         consume(consumer, "item.bloodisfuel.syringe_blade.tooltip.behaviour1", "Extract blood");
         consume(consumer, "item.bloodisfuel.syringe_blade.tooltip.condition1", "L-Click at Mob");

@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel.forge.infrastructure.data;
+package net.electrisoma.bloodisfuel.infrastructure.fabric.data;
 
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
 import net.minecraft.data.tags.TagsProvider.TagAppender;

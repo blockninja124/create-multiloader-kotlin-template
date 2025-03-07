@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel.forge.registry;
+package net.electrisoma.bloodisfuel.registry.forge;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
@@ -10,16 +10,17 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BModTabRegistrateDisplayItemsGeneratorImpl {
 
-    public static boolean isInCreativeTab(RegistryEntry<?> entry, ResourceKey<CreativeModeTab> tab) {
+    public static RegistryObject<CreativeModeTab> getTabObject(ResourceKey<CreativeModeTab> tab) {
         RegistryObject<CreativeModeTab> tabObject;
         if (tab == BModTab.getBaseTabKey()) {
             tabObject = BModTabImpl.MAIN_TAB;
-        }
-
-
-        else {
+        } else {
             tabObject = BModTabImpl.MAIN_TAB;
         }
-        return CreateRegistrate.isInCreativeTab(entry, tabObject);
+        return tabObject;
+    }
+
+    public static boolean isInCreativeTab(RegistryEntry<?> entry, ResourceKey<CreativeModeTab> tab) {
+        return CreateRegistrate.isInCreativeTab(entry, getTabObject(tab));
     }
 }

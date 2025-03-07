@@ -1,7 +1,6 @@
 package net.electrisoma.bloodisfuel.registry;
 
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import dev.architectury.injectables.annotations.ExpectPlatform;
@@ -13,7 +12,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 
 import java.util.*;
@@ -22,6 +20,11 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class BModTab {
+    @ExpectPlatform
+    public static CreativeModeTab getBaseTab() {
+        throw new AssertionError();
+    }
+
     @ExpectPlatform
     public static ResourceKey<CreativeModeTab> getBaseTabKey() {
         throw new AssertionError();
@@ -32,8 +35,7 @@ public class BModTab {
     }
 
     public enum Tabs {
-        MAIN(BModTab::getBaseTabKey)
-
+        MAIN(BModTab::getBaseTabKey),
         ;
 
         private final Supplier<ResourceKey<CreativeModeTab>> keySupplier;
@@ -44,6 +46,15 @@ public class BModTab {
 
         public ResourceKey<CreativeModeTab> getKey() {
             return keySupplier.get();
+        }
+
+        public void use() {
+            use(this);
+        }
+
+        @ExpectPlatform
+        private static void use(Tabs tab) {
+            throw new AssertionError();
         }
     }
 
@@ -59,6 +70,7 @@ public class BModTab {
             Set<Item> exclusions = new ReferenceOpenHashSet<>();
 
             List<ItemProviderEntry<?>> simpleExclusions = List.of(
+                    BBlocks.EXAMPLE_BLOCK
                     //AllBlocks.REFINED_RADIANCE_CASING // just as an example
             );
 
@@ -78,7 +90,11 @@ public class BModTab {
             );
 
             Map<ItemProviderEntry<?>, ItemProviderEntry<?>> simpleAfterOrderings = Map.of(
-
+                /*CRBlocks.CONDUCTOR_WHISTLE_FLAG, CRItems.ITEM_CONDUCTOR_CAP.get(DyeColor.RED),
+                CRItems.REMOTE_LENS, CRBlocks.CONDUCTOR_WHISTLE_FLAG,
+                CRBlocks.CONDUCTOR_VENT, CRItems.REMOTE_LENS,
+                CRBlocks.MANGROVE_TRACK, CRBlocks.SPRUCE_TRACK,
+                CRBlocks.CRIMSON_TRACK, CRBlocks.WARPED_TRACK*/
             );
 
             simpleBeforeOrderings.forEach((entry, otherEntry) -> {
@@ -121,14 +137,58 @@ public class BModTab {
             };
         }
 
-        private static Function<Item, CreativeModeTab.TabVisibility> makeVisibilityFunc() {
-            Map<Item, CreativeModeTab.TabVisibility> visibilities = new Reference2ObjectOpenHashMap<>();
+        private static Function<Item, TabVisibility> makeVisibilityFunc() {
+            Map<Item, TabVisibility> visibilities = new Reference2ObjectOpenHashMap<>();
+
+            Map<ItemProviderEntry<?>, TabVisibility> simpleVisibilities = Map.of(
+                    //AllItems.BLAZE_CAKE_BASE, TabVisibility.SEARCH_TAB_ONLY
+            );
+
+            simpleVisibilities.forEach((entry, factory) -> {
+                visibilities.put(entry.asItem(), factory);
+            });
+
+//            for (ItemEntry<CardItem> entry : NumismaticsItems.CARDS) {
+//                CardItem item = entry.get();
+//                if (item.color != DyeColor.RED) {
+//                    visibilities.put(item, TabVisibility.SEARCH_TAB_ONLY);
+//                }
+//            }
+//
+//            for (ItemEntry<IDCardItem> entry : NumismaticsItems.ID_CARDS) {
+//                IDCardItem item = entry.get();
+//                if (item.color != DyeColor.RED) {
+//                    visibilities.put(item, TabVisibility.SEARCH_TAB_ONLY);
+//                }
+//            }
 
             return item -> {
-                CreativeModeTab.TabVisibility visibility = visibilities.get(item);
-                return Objects.requireNonNullElse(visibility, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                TabVisibility visibility = visibilities.get(item);
+                if (visibility != null) {
+                    return visibility;
+                }
+                return TabVisibility.PARENT_AND_SEARCH_TABS;
             };
         }
+
+        private static final DyeColor[] COLOR_ORDER = new DyeColor[] {
+                DyeColor.RED,
+                DyeColor.ORANGE,
+                DyeColor.YELLOW,
+                DyeColor.LIME,
+                DyeColor.GREEN,
+                DyeColor.LIGHT_BLUE,
+                DyeColor.CYAN,
+                DyeColor.BLUE,
+                DyeColor.PURPLE,
+                DyeColor.MAGENTA,
+                DyeColor.PINK,
+                DyeColor.BROWN,
+                DyeColor.BLACK,
+                DyeColor.GRAY,
+                DyeColor.LIGHT_GRAY,
+                DyeColor.WHITE
+        };
 
         @Override
         public void accept(CreativeModeTab.ItemDisplayParameters pParameters, CreativeModeTab.Output output) {
@@ -211,19 +271,19 @@ public class BModTab {
             }
         }
 
-        private static void outputAll(CreativeModeTab.Output output, List<Item> items, Function<Item, ItemStack> stackFunc, Function<Item, CreativeModeTab.TabVisibility> visibilityFunc) {
+        private static void outputAll(CreativeModeTab.Output output, List<Item> items, Function<Item, ItemStack> stackFunc, Function<Item, TabVisibility> visibilityFunc) {
             for (Item item : items) {
                 output.accept(stackFunc.apply(item), visibilityFunc.apply(item));
             }
         }
 
-        private record ItemOrdering(Item item, Item anchor, ItemOrdering.Type type) {
+        private record ItemOrdering(Item item, Item anchor, Type type) {
             public static ItemOrdering before(Item item, Item anchor) {
-                return new ItemOrdering(item, anchor, ItemOrdering.Type.BEFORE);
+                return new ItemOrdering(item, anchor, Type.BEFORE);
             }
 
             public static ItemOrdering after(Item item, Item anchor) {
-                return new ItemOrdering(item, anchor, ItemOrdering.Type.AFTER);
+                return new ItemOrdering(item, anchor, Type.AFTER);
             }
 
             public enum Type {

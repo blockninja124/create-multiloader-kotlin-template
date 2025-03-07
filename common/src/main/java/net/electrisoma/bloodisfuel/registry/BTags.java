@@ -15,8 +15,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 
-import java.util.function.BiConsumer;
-
 public class BTags {
     public static <T> TagKey<T> optionalTag(Registry<T> registry, ResourceLocation id) {
         return TagKey.create(registry.key(), id);
