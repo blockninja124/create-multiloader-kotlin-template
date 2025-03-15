@@ -1,6 +1,7 @@
 package net.electrisoma.bloodisfuel.registry.fabric;
 
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+import net.electrisoma.bloodisfuel.registry.BBlocks;
 import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.electrisoma.bloodisfuel.registry.BModTab.TabInfo;
 import net.electrisoma.bloodisfuel.registry.BModTab.RegistrateDisplayItemsGenerator;
@@ -12,17 +13,17 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Items;
 
 import java.util.function.Supplier;
 
 
 public class BModTabImpl {
+
+    @SuppressWarnings("Convert2MethodRef")
     private static final TabInfo MAIN_TAB = register("main",
             () -> FabricItemGroup.builder()
                     .title(Component.translatable("itemGroup.bloodisfuel.main"))
-                    .icon(Items.BEEF::getDefaultInstance)
+                    .icon(() -> BBlocks.EXAMPLE_BLOCK.asStack())
                     .displayItems(new RegistrateDisplayItemsGenerator(Tabs.MAIN))
                     .build());
 

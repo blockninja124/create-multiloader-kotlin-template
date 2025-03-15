@@ -1,6 +1,8 @@
 package net.electrisoma.bloodisfuel;
 
 import net.electrisoma.bloodisfuel.registry.*;
+import net.electrisoma.bloodisfuel.registry.fluids.BFluids;
+import net.electrisoma.bloodisfuel.registry.items.BItems;
 
 
 public class ModSetup {
@@ -8,5 +10,7 @@ public class ModSetup {
         BModTab.register();
         BTags.register();
         BBlocks.register();
+        BItems.register();
+        BFluids.register();
     }
 }

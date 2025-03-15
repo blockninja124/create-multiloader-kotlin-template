@@ -1,7 +1,13 @@
 {
+  "block.bloodisfuel.example_block": "Example Block",
+  "block.bloodisfuel.viscera": "Viscera",
   "bloodisfuel.tooltip.empty": "Empty :3 bwaah",
+  "fluid.bloodisfuel.viscera": "Viscera",
+  "item.bloodisfuel.drained_meat": "Drained Meat",
+  "item.bloodisfuel.syringe_blade": "Syringe Blade",
   "item.bloodisfuel.syringe_blade.tooltip.behaviour1": "Extract blood",
   "item.bloodisfuel.syringe_blade.tooltip.condition1": "L-Click at Mob",
   "item.bloodisfuel.syringe_blade.tooltip.summary": "Extract _blood_ from your _friends_ or _enemies_!",
-  "itemGroup.bloodisfuel.base": "Create: Blood is Fuel!"
+  "item.bloodisfuel.viscera_bucket": "Viscera Bucket",
+  "itemGroup.bloodisfuel.main": "Create: Blood is Fuel!"
 }

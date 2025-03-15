@@ -1,6 +1,6 @@
 package net.electrisoma.bloodisfuel.multiloader.fabric;
 
-import net.createmod.catnip.platform.Loader;
+import net.electrisoma.bloodisfuel.multiloader.Loader;
 
 
 public class LoaderImpl {

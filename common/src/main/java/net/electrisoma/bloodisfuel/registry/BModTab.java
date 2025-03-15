@@ -36,6 +36,7 @@ public class BModTab {
 
     public enum Tabs {
         MAIN(BModTab::getBaseTabKey),
+
         ;
 
         private final Supplier<ResourceKey<CreativeModeTab>> keySupplier;
@@ -70,7 +71,6 @@ public class BModTab {
             Set<Item> exclusions = new ReferenceOpenHashSet<>();
 
             List<ItemProviderEntry<?>> simpleExclusions = List.of(
-                    BBlocks.EXAMPLE_BLOCK
                     //AllBlocks.REFINED_RADIANCE_CASING // just as an example
             );
 
@@ -140,28 +140,6 @@ public class BModTab {
         private static Function<Item, TabVisibility> makeVisibilityFunc() {
             Map<Item, TabVisibility> visibilities = new Reference2ObjectOpenHashMap<>();
 
-            Map<ItemProviderEntry<?>, TabVisibility> simpleVisibilities = Map.of(
-                    //AllItems.BLAZE_CAKE_BASE, TabVisibility.SEARCH_TAB_ONLY
-            );
-
-            simpleVisibilities.forEach((entry, factory) -> {
-                visibilities.put(entry.asItem(), factory);
-            });
-
-//            for (ItemEntry<CardItem> entry : NumismaticsItems.CARDS) {
-//                CardItem item = entry.get();
-//                if (item.color != DyeColor.RED) {
-//                    visibilities.put(item, TabVisibility.SEARCH_TAB_ONLY);
-//                }
-//            }
-//
-//            for (ItemEntry<IDCardItem> entry : NumismaticsItems.ID_CARDS) {
-//                IDCardItem item = entry.get();
-//                if (item.color != DyeColor.RED) {
-//                    visibilities.put(item, TabVisibility.SEARCH_TAB_ONLY);
-//                }
-//            }
-
             return item -> {
                 TabVisibility visibility = visibilities.get(item);
                 if (visibility != null) {
@@ -170,25 +148,6 @@ public class BModTab {
                 return TabVisibility.PARENT_AND_SEARCH_TABS;
             };
         }
-
-        private static final DyeColor[] COLOR_ORDER = new DyeColor[] {
-                DyeColor.RED,
-                DyeColor.ORANGE,
-                DyeColor.YELLOW,
-                DyeColor.LIME,
-                DyeColor.GREEN,
-                DyeColor.LIGHT_BLUE,
-                DyeColor.CYAN,
-                DyeColor.BLUE,
-                DyeColor.PURPLE,
-                DyeColor.MAGENTA,
-                DyeColor.PINK,
-                DyeColor.BROWN,
-                DyeColor.BLACK,
-                DyeColor.GRAY,
-                DyeColor.LIGHT_GRAY,
-                DyeColor.WHITE
-        };
 
         @Override
         public void accept(CreativeModeTab.ItemDisplayParameters pParameters, CreativeModeTab.Output output) {

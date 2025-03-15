@@ -113,7 +113,7 @@ public class BTags {
     }
 
     public enum AllItemTags {
-        EXAMPLE_ITEMS,
+        EXAMPLE,
         CARBOHYDRATES,
         FISHES,
         MEATS,

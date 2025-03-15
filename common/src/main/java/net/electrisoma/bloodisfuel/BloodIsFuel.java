@@ -9,8 +9,9 @@ import net.createmod.catnip.lang.FontHelper.Palette;
 import com.tterrag.registrate.providers.ProviderType;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import net.electrisoma.bloodisfuel.infrastructure.data.BTagGen;
-import net.electrisoma.bloodisfuel.infrastructure.data.lang.BLangGen;
+import net.electrisoma.bloodisfuel.base.data.BTagGen;
+import net.electrisoma.bloodisfuel.base.data.lang.BLangGen;
+import net.electrisoma.bloodisfuel.multiloader.Loader;
 import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -21,6 +22,7 @@ import org.slf4j.LoggerFactory;
 public class BloodIsFuel {
     public static final String MOD_ID = "bloodisfuel";
     public static final String NAME = "Blood is Fuel";
+    public static final String VERSION = findVersion();
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
     private static final CreateRegistrate REGISTRATE =
@@ -34,10 +36,10 @@ public class BloodIsFuel {
     }
 
     public static void init() {
-        //LOGGER.info("{} initializing! Create version: {} on platform: {}", NAME, CreateBuildInfo.VERSION, ExampleExpectPlatform.platformName());
+        LOGGER.info("{} {} initializing! Create version: {} on platform: {}", NAME, VERSION, CreateBuildInfo.VERSION, Loader.getCurrent());
 
         ModSetup.register();
-        //finalizeRegistrate();
+        finalizeRegistrate();
 
     }
 
@@ -45,19 +47,24 @@ public class BloodIsFuel {
         return REGISTRATE;
     }
 
-//    @ExpectPlatform
-//    public static void finalizeRegistrate() {
-//        throw new AssertionError();
-//    }
+    @ExpectPlatform
+    public static void finalizeRegistrate() {
+        throw new AssertionError();
+    }
 
     public static void gatherData(DataGenerator.PackGenerator gen) {
         REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BTagGen::generateBlockTags);
-        //REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BTagGen::generateItemTags);
+        REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BTagGen::generateItemTags);
         //REGISTRATE.addDataGenerator(ProviderType.FLUID_TAGS, BTagGen::generateFluidTags);
         REGISTRATE.addDataGenerator(ProviderType.LANG, BLangGen::generate);
         //gen.addProvider(NumismaticsSequencedAssemblyRecipeGen::new);
         //gen.addProvider(NumismaticsStandardRecipeGen::new);
         //gen.addProvider(NumismaticsAdvancements::new);
+    }
+
+    @ExpectPlatform
+    public static String findVersion() {
+        throw new AssertionError();
     }
 
     public static ResourceLocation asResource(String path) {

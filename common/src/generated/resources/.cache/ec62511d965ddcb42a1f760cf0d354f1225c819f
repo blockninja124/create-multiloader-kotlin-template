@@ -1,0 +1,26 @@
+// 1.20.1	2025-03-14T19:34:19.0383177	Blood is Fuel/Registrate Provider for bloodisfuel [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\meats.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\blocks\carbohydrates.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\blocks\meats.json
+eb61396d64adfced93accad75d2566d179210146 assets\bloodisfuel\lang\en_us.json
+afd5b8ca4097901c8c9f365ef2b85003d50797d4 data\minecraft\tags\blocks\mineable\pickaxe.json
+a962c12f79c0783cc1004d34ee9f688b144001ca data\c\tags\fluids\viscera.json
+a962c12f79c0783cc1004d34ee9f688b144001ca data\minecraft\tags\fluids\water.json
+99674bebe9df5df694c177cb7719a5bcc058f312 assets\bloodisfuel\lang\en_ud.json
+a3e6a17fbe02206be37fc82e2f08fdacc5d7de5e assets\bloodisfuel\blockstates\example_block.json
+f234f1e1d9c6c58a4de3748f5703b4739eda8916 assets\bloodisfuel\models\item\viscera_bucket.json
+afd5b8ca4097901c8c9f365ef2b85003d50797d4 data\bloodisfuel\tags\blocks\example.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\raw_meats.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\modded_meats.json
+c2a5dbc9adac4ea4eb39396ca4d33bd9310d6961 assets\bloodisfuel\models\block\example_block.json
+36f4bcbf476f4c2369039402f05475bf2001e074 data\bloodisfuel\loot_tables\blocks\example_block.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\modded_fishes.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\example.json
+485aabedff6d6e34fa88624e2114a163c3b81276 data\bloodisfuel\tags\items\syringe_blade.json
+db95d8ec6fdd5f86e55797a35e7af596465447e4 assets\bloodisfuel\models\block\viscera.json
+55a9f6c822100210d6c3206e72cf2b0825720f52 assets\bloodisfuel\models\item\syringe_blade.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\bloodisfuel\tags\items\fishes.json
+e3f746042bd829a668ee49d9512d6850680037af assets\bloodisfuel\models\item\drained_meat.json
+f24e5ea8c506d3d9814ad77d2a54ab2d35e33c5b data\bloodisfuel\tags\items\carbohydrates.json
+38bc35bb5cb71d92e4f50a07914176a1318ad56b assets\bloodisfuel\blockstates\viscera.json
+7a3a8efcaf8bad9cbbca23edc96318ddb2e9256f assets\bloodisfuel\models\item\example_block.json

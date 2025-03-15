@@ -1,7 +1,13 @@
 {
+  "block.bloodisfuel.example_block": "ʞɔoןᗺ ǝןdɯɐxƎ",
+  "block.bloodisfuel.viscera": "ɐɹǝɔsıΛ",
   "bloodisfuel.tooltip.empty": "ɥɐɐʍq Ɛ: ʎʇdɯƎ",
+  "fluid.bloodisfuel.viscera": "ɐɹǝɔsıΛ",
+  "item.bloodisfuel.drained_meat": "ʇɐǝW pǝuıɐɹᗡ",
+  "item.bloodisfuel.syringe_blade": "ǝpɐןᗺ ǝbuıɹʎS",
   "item.bloodisfuel.syringe_blade.tooltip.behaviour1": "pooןq ʇɔɐɹʇxƎ",
   "item.bloodisfuel.syringe_blade.tooltip.condition1": "qoW ʇɐ ʞɔıןƆ-Ꞁ",
   "item.bloodisfuel.syringe_blade.tooltip.summary": "¡‾sǝıɯǝuǝ‾ ɹo ‾spuǝıɹɟ‾ ɹnoʎ ɯoɹɟ ‾pooןq‾ ʇɔɐɹʇxƎ",
-  "itemGroup.bloodisfuel.base": "¡ןǝnℲ sı pooןᗺ :ǝʇɐǝɹƆ"
+  "item.bloodisfuel.viscera_bucket": "ʇǝʞɔnᗺ ɐɹǝɔsıΛ",
+  "itemGroup.bloodisfuel.main": "¡ןǝnℲ sı pooןᗺ :ǝʇɐǝɹƆ"
 }

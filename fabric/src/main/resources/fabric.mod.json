@@ -16,20 +16,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.electrisoma.bloodisfuel.fabric.BloodIsFuelFabric"
+      "net.electrisoma.bloodisfuel.fabric.BloodIsFuelImpl"
     ],
     "fabric-datagen": [
       "net.electrisoma.bloodisfuel.fabric.BloodDataFabric"
     ]
   },
-  "mixins": [
-    "bloodisfuel.mixins.json",
-    "bloodisfuel-common.mixins.json"
-  ],
   "depends": {
     "minecraft": "${minecraft_version}",
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
-    "create": "${create_fabric_version}"
+    "create": "${create_version}"
   }
 }

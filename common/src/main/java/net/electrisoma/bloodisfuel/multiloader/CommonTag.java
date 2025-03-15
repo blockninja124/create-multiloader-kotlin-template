@@ -2,7 +2,7 @@ package net.electrisoma.bloodisfuel.multiloader;
 
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
-import net.electrisoma.bloodisfuel.infrastructure.data.BTagGen;
+import net.electrisoma.bloodisfuel.base.data.BTagGen;
 import net.minecraft.core.Registry;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
