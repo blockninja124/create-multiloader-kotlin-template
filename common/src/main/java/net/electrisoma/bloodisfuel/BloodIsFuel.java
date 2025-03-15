@@ -9,11 +9,12 @@ import net.createmod.catnip.lang.FontHelper.Palette;
 import com.tterrag.registrate.providers.ProviderType;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import net.electrisoma.bloodisfuel.base.data.BTagGen;
 import net.electrisoma.bloodisfuel.base.data.lang.BLangGen;
+import net.electrisoma.bloodisfuel.infrastructure.data.BTagGen;
 import net.electrisoma.bloodisfuel.multiloader.Loader;
 import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DataProvider;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,10 +56,12 @@ public class BloodIsFuel {
     public static void gatherData(DataGenerator.PackGenerator gen) {
         REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BTagGen::generateBlockTags);
         REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BTagGen::generateItemTags);
-        //REGISTRATE.addDataGenerator(ProviderType.FLUID_TAGS, BTagGen::generateFluidTags);
+        REGISTRATE.addDataGenerator(ProviderType.FLUID_TAGS, BTagGen::generateFluidTags);
+
         REGISTRATE.addDataGenerator(ProviderType.LANG, BLangGen::generate);
         //gen.addProvider(NumismaticsSequencedAssemblyRecipeGen::new);
-        //gen.addProvider(NumismaticsStandardRecipeGen::new);
+
+        //gen.addProvider(BStandardRecipeGen::new);
         //gen.addProvider(NumismaticsAdvancements::new);
     }
 

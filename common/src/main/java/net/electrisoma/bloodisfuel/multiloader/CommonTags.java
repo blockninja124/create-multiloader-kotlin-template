@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CommonTags {
     public static final List<CommonTag<Item>> ALL_ITEMS = new ArrayList<>();
     public static final List<CommonTag<Block>> ALL_BLOCKS = new ArrayList<>();

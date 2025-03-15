@@ -1,21 +1,18 @@
 package net.electrisoma.bloodisfuel.registry.items;
 
-import com.simibubi.create.AllEnchantments;
 import com.simibubi.create.foundation.utility.CreateLang;
-import dev.architectury.injectables.annotations.ExpectPlatform;
 import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
 import io.github.fabricators_of_create.porting_lib.transfer.fluid.item.FluidHandlerItemStack;
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ItemLike;
+
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 
