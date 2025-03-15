@@ -22,7 +22,7 @@ import net.minecraft.world.level.material.Fluid;
 
 import static net.minecraft.world.item.Items.BUCKET;
 
-
+//confusion
 @SuppressWarnings("UnstableApiUsage")
 public class BFluids {
     private static final CreateRegistrate REGISTRATE = BloodIsFuel.registrate();
