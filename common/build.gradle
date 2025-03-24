@@ -1,3 +1,6 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
 architectury {
     common(enabled_platforms.split(","))
 }
@@ -22,7 +25,8 @@ repositories {
     maven { url = "https://maven.blamejared.com" } // JEI
 
     maven { url = "https://api.modrinth.com/maven" } // LazyDFU
-    maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
+    maven { url = "https://maven.terraformersmc.com/releases" }
+    mavenCentral() // Mod Menu, EMI
 }
 
 dependencies {
@@ -31,6 +35,7 @@ dependencies {
     modCompileOnly("com.simibubi.create:create-fabric-$minecraft_version:$create_fabric_version")
 
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:$mixin_extras_version"))
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 sourceSets.main {
@@ -42,4 +47,7 @@ sourceSets.main {
         srcDir 'src/generated/resources'
         exclude ".cache"
     }
+}
+kotlin {
+    jvmToolchain(17)
 }

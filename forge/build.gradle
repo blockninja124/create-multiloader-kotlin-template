@@ -1,5 +1,6 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 architectury {
@@ -25,6 +26,7 @@ configurations {
 }
 
 repositories {
+    mavenCentral()
     // No additional repositories are needed on forge, Tterrag's has it all.
 }
 
@@ -45,6 +47,7 @@ dependencies {
 
     // Development QOL
     modLocalRuntime("mezz.jei:jei-$minecraft_version-forge:$jei_version") { transitive = false }
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
     // if you would like to add integration with JEI, uncomment this line.
 //    modCompileOnly("mezz.jei:jei-$minecraft_version:$jei_version:api")
@@ -108,4 +111,7 @@ components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
+}
+kotlin {
+    jvmToolchain(17)
 }
