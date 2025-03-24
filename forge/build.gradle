@@ -68,6 +68,11 @@ processResources {
     filesMatching("META-INF/mods.toml") {
         expand properties
     }
+
+    // Replace description in pack.mcmeta
+    filesMatching("pack.mcmeta") {
+        expand properties
+    }
 }
 
 loom {
