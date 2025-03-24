@@ -10,7 +10,7 @@ architectury {
 
 forgix {
     group = maven_group
-    mergedJarName = "bloodisfuel-${mod_version}-mult.jar"
+    mergedJarName = "examplemod-${mod_version}-mult.jar"
 }
 
 allprojects {

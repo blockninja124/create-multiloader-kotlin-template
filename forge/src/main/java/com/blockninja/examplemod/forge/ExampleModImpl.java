@@ -1,22 +1,22 @@
-package net.electrisoma.bloodisfuel.forge;
+package com.blockninja.examplemod.forge;
 
-import net.electrisoma.bloodisfuel.BloodIsFuel;
+import com.blockninja.examplemod.ExampleMod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
-@Mod(BloodIsFuel.MOD_ID)
+@Mod(ExampleMod.MOD_ID)
 @Mod.EventBusSubscriber
-public class BloodIsFuelImpl {
+public class ExampleModImpl {
     static IEventBus eventBus;
 
-    public BloodIsFuelImpl() {
+    public ExampleModImpl() {
         eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        BloodIsFuel.init();
+        ExampleMod.init();
     }
 
     public static void finalizeRegistrate() {
-        BloodIsFuel.registrate().registerEventListeners(eventBus);
+        ExampleMod.registrate().registerEventListeners(eventBus);
     }
 }

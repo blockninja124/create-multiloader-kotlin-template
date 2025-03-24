@@ -1,4 +1,4 @@
-package net.electrisoma.bloodisfuel;
+package com.blockninja.examplemod;
 
 import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -16,9 +16,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class BloodIsFuel {
-    public static final String MOD_ID = "bloodisfuel";
-    public static final String NAME = "Blood is Fuel";
+public class ExampleMod {
+    public static final String MOD_ID = "examplemod";
+    public static final String NAME = "Example mod";
     public static final String VERSION = "findVersion()";
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 

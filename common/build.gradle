@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/bloodisfuel.accesswidener")
+    accessWidenerPath = file("src/main/resources/examplemod.accesswidener")
 }
 
 repositories {

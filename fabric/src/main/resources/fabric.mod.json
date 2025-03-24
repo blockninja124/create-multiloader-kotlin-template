@@ -12,16 +12,13 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "Insert License Here",
-  "icon": "assets/bloodisfuel/icon.png",
+  "icon": "assets/examplemod/icon.png",
 
   "environment": "*",
 
   "entrypoints": {
     "main": [
-      "net.electrisoma.bloodisfuel.fabric.BloodIsFuelImpl"
-    ],
-    "fabric-datagen": [
-      "net.electrisoma.bloodisfuel.fabric.BloodDataFabric"
+      "com.blockninja.examplemod.fabric.ExampleModImpl"
     ]
   },
 
