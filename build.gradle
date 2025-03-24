@@ -1,18 +1,8 @@
-buildscript {
-    ext.kotlin_version = '2.1.20'
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
 plugins {
     id "architectury-plugin" version "3.4.+"
     id "dev.architectury.loom" version "1.7.+" apply false
     id "io.github.pacifistmc.forgix" version "1.2.6" //https://github.com/PacifistMC/Forgix
 }
-apply plugin: 'kotlin'
 
 architectury {
     minecraft = minecraft_version
@@ -59,13 +49,4 @@ subprojects {
         minecraft "com.mojang:minecraft:$minecraft_version"
         mappings loom.officialMojangMappings()
     }
-}
-repositories {
-    mavenCentral()
-}
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-}
-kotlin {
-    jvmToolchain(17)
 }

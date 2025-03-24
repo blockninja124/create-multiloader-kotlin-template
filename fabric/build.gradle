@@ -1,6 +1,5 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
-    id 'org.jetbrains.kotlin.jvm'
 }
 
 architectury {
@@ -34,8 +33,7 @@ repositories {
 
     maven { url = "https://maven.shedaniel.me" } // Cloth Config, REI
     maven { url = "https://maven.blamejared.com" } // JEI
-    maven { url = "https://maven.terraformersmc.com/releases" }
-    mavenCentral() // Mod Menu, EMI
+    maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
 }
 
 configurations.configureEach {
@@ -68,7 +66,6 @@ dependencies {
         case "disabled": break
         default: println("Unknown recipe viewer specified: $fabric_recipe_viewer. Must be JEI, REI, EMI, or disabled.")
     }
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     // if you would like to add integration with them, uncomment them here.
 //    modCompileOnly("mezz.jei:jei-$minecraft_version-fabric:$jei_version")
 //    modCompileOnly("mezz.jei:jei-$minecraft_version-common:$jei_version")
@@ -125,7 +122,4 @@ components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
-}
-kotlin {
-    jvmToolchain(17)
 }
