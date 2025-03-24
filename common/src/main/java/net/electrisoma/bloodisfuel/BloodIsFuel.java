@@ -1,21 +1,25 @@
 package net.electrisoma.bloodisfuel;
 
+import net.electrisoma.bloodisfuel.base.data.lang.BLangGen;
+import net.electrisoma.bloodisfuel.base.data.BTagGen;
+import net.electrisoma.bloodisfuel.multiloader.Loader;
+import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
+
 import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+
 import net.createmod.catnip.lang.FontHelper.Palette;
+
 import com.tterrag.registrate.providers.ProviderType;
+
+import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
+
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import net.electrisoma.bloodisfuel.base.data.lang.BLangGen;
-import net.electrisoma.bloodisfuel.infrastructure.data.BTagGen;
-import net.electrisoma.bloodisfuel.multiloader.Loader;
-import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
-import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +45,6 @@ public class BloodIsFuel {
 
         ModSetup.register();
         finalizeRegistrate();
-
     }
 
     public static CreateRegistrate registrate() {
@@ -73,9 +76,4 @@ public class BloodIsFuel {
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
-
-//    @ExpectPlatform
-//    public static void finalizeRegistrate() {
-//        throw new AssertionError();
-//    }
 }

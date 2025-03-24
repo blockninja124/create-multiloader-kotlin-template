@@ -1,9 +1,12 @@
 package net.electrisoma.bloodisfuel.registry;
 
+import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.SharedProperties;
+
 import com.tterrag.registrate.util.entry.BlockEntry;
-import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;

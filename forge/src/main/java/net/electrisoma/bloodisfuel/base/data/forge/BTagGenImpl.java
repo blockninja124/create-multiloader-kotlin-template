@@ -1,6 +1,7 @@
 package net.electrisoma.bloodisfuel.base.data.forge;
 
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
+
 import net.minecraft.data.tags.TagsProvider.TagAppender;
 import net.minecraft.tags.TagKey;
 

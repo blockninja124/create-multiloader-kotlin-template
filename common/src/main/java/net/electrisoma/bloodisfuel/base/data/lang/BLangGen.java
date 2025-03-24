@@ -8,11 +8,11 @@ public class BLangGen {
     public static void generate(RegistrateLangProvider provider) {
         BiConsumer<String, String> langConsumer = provider::add;
 
-        providePartialLang(langConsumer);
+        provideDefaultLang(langConsumer);
         //BAdvancements.provideLang(langConsumer);
     }
 
-    private static void providePartialLang(BiConsumer<String, String> consumer) {
-        BLangPartial.provideLang(consumer);
+    private static void provideDefaultLang(BiConsumer<String, String> consumer) {
+        defaultLang.provideLang(consumer);
     }
 }

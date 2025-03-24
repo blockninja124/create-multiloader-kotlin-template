@@ -1,9 +1,10 @@
 package net.electrisoma.bloodisfuel.multiloader;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
-import org.jetbrains.annotations.ApiStatus.Internal;
-
 import java.util.function.Supplier;
+
+import dev.architectury.injectables.annotations.ExpectPlatform;
+
+import org.jetbrains.annotations.ApiStatus.Internal;
 
 
 public enum Env {

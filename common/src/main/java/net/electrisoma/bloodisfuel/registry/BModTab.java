@@ -1,12 +1,13 @@
 package net.electrisoma.bloodisfuel.registry;
 
-import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.tterrag.registrate.util.entry.ItemProviderEntry;
-import com.tterrag.registrate.util.entry.RegistryEntry;
-import dev.architectury.injectables.annotations.ExpectPlatform;
-import it.unimi.dsi.fastutil.objects.*;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.electrisoma.bloodisfuel.multiloader.Env;
+
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
+
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -18,6 +19,11 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+
+import it.unimi.dsi.fastutil.objects.*;
+
+import dev.architectury.injectables.annotations.ExpectPlatform;
+
 
 public class BModTab {
     @ExpectPlatform

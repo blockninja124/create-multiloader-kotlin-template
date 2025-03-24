@@ -1,7 +1,9 @@
 package net.electrisoma.bloodisfuel.registry;
 
-import net.createmod.catnip.lang.Lang;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+
+import net.createmod.catnip.lang.Lang;
+
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -14,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
+
 
 public class BTags {
     public static <T> TagKey<T> optionalTag(Registry<T> registry, ResourceLocation id) {

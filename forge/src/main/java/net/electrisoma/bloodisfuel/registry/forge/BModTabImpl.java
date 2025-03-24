@@ -5,6 +5,7 @@ import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.electrisoma.bloodisfuel.registry.BBlocks;
 import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.electrisoma.bloodisfuel.registry.BModTab.RegistrateDisplayItemsGenerator;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;

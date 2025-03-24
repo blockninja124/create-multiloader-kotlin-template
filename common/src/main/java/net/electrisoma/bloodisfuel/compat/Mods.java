@@ -1,11 +1,15 @@
 package net.electrisoma.bloodisfuel.compat;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.createmod.catnip.lang.Lang;
-import org.jetbrains.annotations.Nullable;
+
 
 import java.util.Optional;
 import java.util.function.Supplier;
+
+import org.jetbrains.annotations.Nullable;
+
+import dev.architectury.injectables.annotations.ExpectPlatform;
+
 
 public enum Mods {
 

@@ -1,8 +1,11 @@
 package net.electrisoma.bloodisfuel.registry.forge;
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.electrisoma.bloodisfuel.registry.BModTab;
+
+import com.simibubi.create.foundation.data.CreateRegistrate;
+
+import com.tterrag.registrate.util.entry.RegistryEntry;
+
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.registries.RegistryObject;

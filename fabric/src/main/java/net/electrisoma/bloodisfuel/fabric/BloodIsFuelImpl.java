@@ -1,6 +1,7 @@
 package net.electrisoma.bloodisfuel.fabric;
 
 import net.electrisoma.bloodisfuel.BloodIsFuel;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 

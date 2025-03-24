@@ -1,6 +1,7 @@
 package net.electrisoma.bloodisfuel.compat.fabric;
 
 import net.fabricmc.loader.api.FabricLoader;
+
 import org.jetbrains.annotations.Nullable;
 
 

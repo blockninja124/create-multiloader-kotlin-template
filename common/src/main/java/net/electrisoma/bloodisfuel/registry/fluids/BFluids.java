@@ -1,10 +1,13 @@
 package net.electrisoma.bloodisfuel.registry.fluids;
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.fabric.SimpleFlowableFluid;
-import com.tterrag.registrate.util.entry.FluidEntry;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.electrisoma.bloodisfuel.registry.BTags;
+
+import com.simibubi.create.foundation.data.CreateRegistrate;
+
+import com.tterrag.registrate.fabric.SimpleFlowableFluid;
+import com.tterrag.registrate.util.entry.FluidEntry;
+
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
@@ -12,18 +15,20 @@ import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributeHandler;
 import net.fabricmc.fabric.api.transfer.v1.fluid.base.EmptyItemFluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.base.FullItemFluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.Level;
-
-import javax.annotation.Nullable;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.material.Fluid;
 
+import javax.annotation.Nullable;
+
 import static net.minecraft.world.item.Items.BUCKET;
 
+
 //confusion
-@SuppressWarnings("UnstableApiUsage")
+@SuppressWarnings({"UnstableApiUsage","unused"})
 public class BFluids {
     private static final CreateRegistrate REGISTRATE = BloodIsFuel.registrate();
 

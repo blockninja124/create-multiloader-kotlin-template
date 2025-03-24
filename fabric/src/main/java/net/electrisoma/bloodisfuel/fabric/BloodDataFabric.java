@@ -1,8 +1,10 @@
 package net.electrisoma.bloodisfuel.fabric;
 
-import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import net.electrisoma.bloodisfuel.BloodIsFuel;
 import net.electrisoma.bloodisfuel.compat.Mods;
+
+import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
+
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 

@@ -5,7 +5,9 @@ import net.electrisoma.bloodisfuel.registry.BBlocks;
 import net.electrisoma.bloodisfuel.registry.BModTab.Tabs;
 import net.electrisoma.bloodisfuel.registry.BModTab.TabInfo;
 import net.electrisoma.bloodisfuel.registry.BModTab.RegistrateDisplayItemsGenerator;
+
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;

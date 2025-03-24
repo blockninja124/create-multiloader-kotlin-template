@@ -1,9 +1,12 @@
 package net.electrisoma.bloodisfuel.registry.items.syringe_blade;
 
+import net.electrisoma.bloodisfuel.registry.BTags;
+
 import com.simibubi.create.content.equipment.armor.CapacityEnchantment;
 import com.simibubi.create.foundation.item.CustomArmPoseItem;
+
 import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
-import net.electrisoma.bloodisfuel.registry.BTags;
+
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -17,6 +20,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
