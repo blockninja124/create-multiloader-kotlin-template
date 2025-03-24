@@ -4,30 +4,28 @@ issueTrackerURL=""
 license="MIT"
 
 [[mods]]
-modId="bloodisfuel"
-version="1.2.0"
-displayName="Blood is Fuel"
-authors="Me!"
-description='''
-This is an example description! Tell everyone what your mod is about!
-'''
+modId="${mod_id}"
+version="${version}"
+displayName="${mod_name}"
+authors="${authors}"
+description='${mod_description}'
 logoFile="icon.png"
 
-[[dependencies.bloodisfuel]]
+[[dependencies.${mod_id}]]
 modId="forge"
 mandatory=true
-versionRange="[47.1.3,)"
+versionRange="[${forge_version},)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.bloodisfuel]]
+[[dependencies.${mod_id}]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.20.1]"
+versionRange="[${minecraft_version}]"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.bloodisfuel]]
+[[dependencies.${mod_id}]]
 modId="create"
 mandatory=true
 versionRange="[6.0.2,6.1.0)"
