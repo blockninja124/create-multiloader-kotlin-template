@@ -15,15 +15,6 @@ public class BloodIsFuelImpl implements ModInitializer {
         BloodIsFuel.init();
     }
 
-    public static String findVersion() {
-        return FabricLoader.getInstance()
-                .getModContainer(BloodIsFuel.MOD_ID)
-                .orElseThrow()
-                .getMetadata()
-                .getVersion()
-                .getFriendlyString();
-    }
-
     public static void finalizeRegistrate() {
         BloodIsFuel.registrate().register();
     }
